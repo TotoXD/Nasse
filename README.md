@@ -11,30 +11,43 @@
 # Config pour chaque router
 --------------------------------
 configure terminal
-
-interface gigabitEthernet X/0
-
-ip address 192.168.XX.X 255.255.255.0
-
+interface gigabitEthernet 4/0
+ip address 192.168.11.1 255.255.255.0
 no shutdown
-
 exit
-
 exit
-
+copy run start
+-------------------------------- (Pour plusieurs interfaces à la fois)
+configure terminal
+interface gigabitEthernet 1/0
+ip address 192.168.22.2 255.255.255.0
+no shutdown
+exit
+interface gigabitEthernet 2/0
+ip address 192.168.27.1 255.255.255.0
+no shutdown
+exit
+interface gigabitEthernet 3/0
+ip address 192.168.25.2 255.255.255.0
+no shutdown
+exit
+exit
 copy run start
 --------------------------------
 
 # Commandes utiles:
 
-do sho cdp nei (show neighbours)
+(show neighbours)
+configure terminal
+do sho cdp nei
 
 show running-config
 
-default interface gi 1/1 (reset interface)
+(reset interface)
+default interface gi 1/1
 
-copy run start (save config)
-
+(save config)
+copy run start
 
 
 	4. Configure OSPF sur les routeurs et ajouter les routes
