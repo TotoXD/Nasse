@@ -1,0 +1,27 @@
+Nov 28 12:41:59.334 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Nov 28 12:41:59.336 HYPERVISOR: Started on IP = localhost, TCP port = 55416.
+Nov 28 12:41:59.822 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 28 12:41:59.822 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips 
+Nov 28 12:41:59.822 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips
+Nov 28 12:41:59.822 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\d81c3589-b86c-4233-bd18-24990d3bbcf8 
+Nov 28 12:41:59.823 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\d81c3589-b86c-4233-bd18-24990d3bbcf8
+Nov 28 12:41:59.823 HYPERVISOR: exec_cmd: vm create P4 12 c7200 
+Nov 28 12:41:59.825 VM: VM P4 created.
+Nov 28 12:41:59.826 HYPERVISOR: exec_cmd: vm set_con_tcp_port P4 5018 
+Nov 28 12:41:59.826 HYPERVISOR: exec_cmd: c7200 get_mac_addr P4 
+Nov 28 12:41:59.826 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 12:41:59.826 HYPERVISOR: exec_cmd: vm slot_add_binding P4 0 0 C7200-IO-FE 
+Nov 28 12:41:59.826 HYPERVISOR: exec_cmd: vm set_disk0 P4 0 
+Nov 28 12:41:59.827 HYPERVISOR: exec_cmd: vm set_exec_area P4 64 
+Nov 28 12:41:59.828 HYPERVISOR: exec_cmd: vm set_ios P4 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:41:59.828 HYPERVISOR: exec_cmd: c7200 set_mac_addr P4 ca0c.3f4c.0000 
+Nov 28 12:41:59.828 HYPERVISOR: exec_cmd: vm set_nvram P4 512 
+Nov 28 12:41:59.828 HYPERVISOR: exec_cmd: vm set_ram P4 512 
+Nov 28 12:41:59.829 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 12:41:59.829 HYPERVISOR: exec_cmd: vm slot_add_binding P4 1 0 PA-GE 
+Nov 28 12:41:59.829 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 12:41:59.829 HYPERVISOR: exec_cmd: vm slot_add_binding P4 2 0 PA-GE 
+Nov 28 12:41:59.829 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 12:41:59.829 HYPERVISOR: exec_cmd: vm slot_add_binding P4 3 0 PA-GE 
+Nov 28 12:41:59.830 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 12:41:59.830 HYPERVISOR: exec_cmd: vm slot_add_binding P4 4 0 PA-GE 

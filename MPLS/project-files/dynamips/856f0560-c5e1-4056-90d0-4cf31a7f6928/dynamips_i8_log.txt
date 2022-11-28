@@ -1,0 +1,25 @@
+Nov 28 12:41:55.412 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Nov 28 12:41:55.413 HYPERVISOR: Started on IP = localhost, TCP port = 55395.
+Nov 28 12:41:55.916 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 28 12:41:55.916 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips 
+Nov 28 12:41:55.916 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips
+Nov 28 12:41:55.916 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\62538418-bbdc-4a87-92f6-ad61e5d1c3b0 
+Nov 28 12:41:55.917 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\62538418-bbdc-4a87-92f6-ad61e5d1c3b0
+Nov 28 12:41:55.917 HYPERVISOR: exec_cmd: vm create CS2 5 c7200 
+Nov 28 12:41:55.919 VM: VM CS2 created.
+Nov 28 12:41:55.919 HYPERVISOR: exec_cmd: vm set_con_tcp_port CS2 5004 
+Nov 28 12:41:55.919 HYPERVISOR: exec_cmd: c7200 get_mac_addr CS2 
+Nov 28 12:41:55.919 HYPERVISOR: exec_cmd: vm get_status CS2 
+Nov 28 12:41:55.919 HYPERVISOR: exec_cmd: vm slot_add_binding CS2 0 0 C7200-IO-FE 
+Nov 28 12:41:55.919 HYPERVISOR: exec_cmd: vm set_disk0 CS2 0 
+Nov 28 12:41:55.920 HYPERVISOR: exec_cmd: vm set_exec_area CS2 64 
+Nov 28 12:41:55.921 HYPERVISOR: exec_cmd: vm set_ios CS2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:41:55.921 HYPERVISOR: exec_cmd: c7200 set_mac_addr CS2 ca05.5c2c.0000 
+Nov 28 12:41:55.921 HYPERVISOR: exec_cmd: vm set_nvram CS2 512 
+Nov 28 12:41:55.921 HYPERVISOR: exec_cmd: vm set_ram CS2 512 
+Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm get_status CS2 
+Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm slot_add_binding CS2 1 0 PA-GE 
+Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm get_status CS2 
+Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm slot_add_binding CS2 2 0 PA-GE 
+Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm get_status CS2 
+Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm slot_add_binding CS2 3 0 PA-GE 

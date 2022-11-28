@@ -1,0 +1,6 @@
+Nov 28 12:41:53.775 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Nov 28 12:41:53.777 HYPERVISOR: Started on IP = localhost, TCP port = 55386.
+Nov 28 12:41:54.275 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 28 12:41:54.275 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips 
+Nov 28 12:41:54.275 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips
+Nov 28 12:41:54.276 HYPERVISOR: exec_cmd: ethsw create Switch1 
