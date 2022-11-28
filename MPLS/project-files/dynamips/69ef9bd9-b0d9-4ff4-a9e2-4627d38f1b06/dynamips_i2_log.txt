@@ -1,0 +1,53 @@
+Nov 28 14:43:11.991 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Nov 28 14:43:11.992 HYPERVISOR: Started on IP = localhost, TCP port = 59916.
+Nov 28 14:43:12.494 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 28 14:43:12.494 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips 
+Nov 28 14:43:12.495 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips
+Nov 28 14:43:12.495 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\61b60946-41da-41c9-98dc-2681e966b5e8 
+Nov 28 14:43:12.496 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\61b60946-41da-41c9-98dc-2681e966b5e8
+Nov 28 14:43:12.496 HYPERVISOR: exec_cmd: vm create CE1 6 c7200 
+Nov 28 14:43:12.499 VM: VM CE1 created.
+Nov 28 14:43:12.500 HYPERVISOR: exec_cmd: vm set_con_tcp_port CE1 5005 
+Nov 28 14:43:12.500 HYPERVISOR: exec_cmd: c7200 get_mac_addr CE1 
+Nov 28 14:43:12.500 HYPERVISOR: exec_cmd: vm get_status CE1 
+Nov 28 14:43:12.500 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 0 0 C7200-IO-FE 
+Nov 28 14:43:12.501 HYPERVISOR: exec_cmd: vm set_disk0 CE1 0 
+Nov 28 14:43:12.501 HYPERVISOR: exec_cmd: vm set_exec_area CE1 64 
+Nov 28 14:43:12.502 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:43:12.503 HYPERVISOR: exec_cmd: c7200 set_mac_addr CE1 ca06.5e84.0000 
+Nov 28 14:43:12.503 HYPERVISOR: exec_cmd: vm set_nvram CE1 512 
+Nov 28 14:43:12.503 HYPERVISOR: exec_cmd: vm set_ram CE1 512 
+Nov 28 14:43:12.503 HYPERVISOR: exec_cmd: vm get_status CE1 
+Nov 28 14:43:12.503 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 1 0 PA-GE 
+Nov 28 14:43:12.504 HYPERVISOR: exec_cmd: vm get_status CE1 
+Nov 28 14:43:12.504 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 2 0 PA-GE 
+Nov 28 14:43:12.504 HYPERVISOR: exec_cmd: vm get_status CE1 
+Nov 28 14:43:12.504 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 3 0 PA-GE 
+Nov 28 14:43:20.140 HYPERVISOR: exec_cmd: nio create_udp udp-aa7c2e2b-23b9-4606-b876-34f8aa50ee10 10004 127.0.0.1 10005 
+Nov 28 14:43:20.379 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE1 1 0 udp-aa7c2e2b-23b9-4606-b876-34f8aa50ee10 
+Nov 28 14:43:20.380 HYPERVISOR: exec_cmd: vm get_status CE1 
+Nov 28 14:43:20.683 HYPERVISOR: exec_cmd: nio create_udp udp-a0fbcdba-b9b5-4523-af26-2342e6a1e128 10010 127.0.0.1 10011 
+Nov 28 14:43:20.686 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE1 2 0 udp-a0fbcdba-b9b5-4523-af26-2342e6a1e128 
+Nov 28 14:43:20.686 HYPERVISOR: exec_cmd: vm get_status CE1 
+Nov 28 14:43:20.741 HYPERVISOR: exec_cmd: nio create_udp udp-e0638b68-1aff-49dd-84e2-7779d7d0cce0 10014 127.0.0.1 10015 
+Nov 28 14:43:20.743 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE1 3 0 udp-e0638b68-1aff-49dd-84e2-7779d7d0cce0 
+Nov 28 14:43:20.743 HYPERVISOR: exec_cmd: vm get_status CE1 
+Nov 28 14:45:48.848 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:45:49.067 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:45:49.284 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:46:44.879 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:46:45.820 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:46:47.747 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:47:31.005 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:48:32.548 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:51:26.252 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 14:56:33.677 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 15:06:41.732 HYPERVISOR: exec_cmd: vm get_status CE1 
+Nov 28 15:06:41.733 HYPERVISOR: exec_cmd: vm extract_config CE1 
+Nov 28 15:06:42.061 HYPERVISOR: exec_cmd: vm get_status CE1 
+Nov 28 15:06:42.062 HYPERVISOR: exec_cmd: vm extract_config CE1 
+Nov 28 15:06:42.064 HYPERVISOR: exec_cmd: vm delete CE1 
+Nov 28 15:06:42.064 VM: VM CE1 destroyed.
+Nov 28 15:06:42.065 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 28 15:06:42.262 HYPERVISOR: Stopped.
+Nov 28 15:06:42.262 GENERAL: reset done.
