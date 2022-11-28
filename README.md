@@ -28,9 +28,14 @@ copy run start
 # Commandes utiles:
 
 do sho cdp nei (show neighbours)
+
 show running-config
+
 default interface gi 1/1 (reset interface)
+
 copy run start (save config)
+
+
 
 	4. Configure OSPF sur les routeurs et ajouter les routes
 
