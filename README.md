@@ -1,6 +1,6 @@
 # Nasse
 
-I. Configurer MPLS à la main sur tout le réseau
+# I. Configurer MPLS à la main sur tout le réseau
 	
 	1. Ajouter des routers et des links
 
@@ -30,4 +30,5 @@ copy run start (save config)
 
 	5. ...
 
-II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
+# II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
+
