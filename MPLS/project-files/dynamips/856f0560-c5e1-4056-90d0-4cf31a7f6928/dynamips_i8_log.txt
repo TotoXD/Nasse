@@ -23,3 +23,28 @@ Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm get_status CS2
 Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm slot_add_binding CS2 2 0 PA-GE 
 Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm get_status CS2 
 Nov 28 12:41:55.922 HYPERVISOR: exec_cmd: vm slot_add_binding CS2 3 0 PA-GE 
+Nov 28 12:42:04.026 HYPERVISOR: exec_cmd: nio create_udp udp-0236ae4d-75d1-428f-b135-95fac9852257 10042 127.0.0.1 10043 
+Nov 28 12:42:04.259 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CS2 1 0 udp-0236ae4d-75d1-428f-b135-95fac9852257 
+Nov 28 12:42:04.259 HYPERVISOR: exec_cmd: vm get_status CS2 
+Nov 28 12:42:08.303 HYPERVISOR: exec_cmd: nio create_udp udp-d0a8c5ee-4989-40ac-8898-b396baf30c0a 10138 127.0.0.1 10139 
+Nov 28 12:42:08.306 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CS2 2 0 udp-d0a8c5ee-4989-40ac-8898-b396baf30c0a 
+Nov 28 12:42:08.306 HYPERVISOR: exec_cmd: vm get_status CS2 
+Nov 28 12:42:08.391 HYPERVISOR: exec_cmd: nio create_udp udp-74a1ec9b-1a95-4ca9-af0d-18504051ab63 10142 127.0.0.1 10143 
+Nov 28 12:42:08.393 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CS2 3 0 udp-74a1ec9b-1a95-4ca9-af0d-18504051ab63 
+Nov 28 12:42:08.394 HYPERVISOR: exec_cmd: vm get_status CS2 
+Nov 28 12:46:06.575 HYPERVISOR: exec_cmd: vm set_ios CS2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:46:18.632 HYPERVISOR: exec_cmd: vm set_ios CS2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:46:19.120 HYPERVISOR: exec_cmd: vm set_ios CS2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:46:19.486 HYPERVISOR: exec_cmd: vm set_ios CS2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:21.586 HYPERVISOR: exec_cmd: vm set_ios CS2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:25.929 HYPERVISOR: exec_cmd: vm set_ios CS2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:26.813 HYPERVISOR: exec_cmd: vm set_ios CS2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 13:01:13.150 HYPERVISOR: exec_cmd: vm get_status CS2 
+Nov 28 13:01:13.152 HYPERVISOR: exec_cmd: vm extract_config CS2 
+Nov 28 13:01:13.549 HYPERVISOR: exec_cmd: vm get_status CS2 
+Nov 28 13:01:13.550 HYPERVISOR: exec_cmd: vm extract_config CS2 
+Nov 28 13:01:13.551 HYPERVISOR: exec_cmd: vm delete CS2 
+Nov 28 13:01:13.551 VM: VM CS2 destroyed.
+Nov 28 13:01:13.552 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 28 13:01:13.955 HYPERVISOR: Stopped.
+Nov 28 13:01:13.955 GENERAL: reset done.

@@ -23,3 +23,23 @@ Nov 28 12:42:00.387 HYPERVISOR: exec_cmd: vm get_status PE2
 Nov 28 12:42:00.387 HYPERVISOR: exec_cmd: vm slot_add_binding PE2 2 0 PA-GE 
 Nov 28 12:42:00.388 HYPERVISOR: exec_cmd: vm get_status PE2 
 Nov 28 12:42:00.388 HYPERVISOR: exec_cmd: vm slot_add_binding PE2 3 0 PA-GE 
+Nov 28 12:42:06.550 HYPERVISOR: exec_cmd: nio create_udp udp-c9e698ff-3549-4f8b-b944-f1952e096c41 10086 127.0.0.1 10087 
+Nov 28 12:42:06.794 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PE2 1 0 udp-c9e698ff-3549-4f8b-b944-f1952e096c41 
+Nov 28 12:42:06.794 HYPERVISOR: exec_cmd: vm get_status PE2 
+Nov 28 12:42:06.877 HYPERVISOR: exec_cmd: nio create_udp udp-1e0d332a-8fae-46ab-b48d-539b1fc64c91 10092 127.0.0.1 10093 
+Nov 28 12:42:06.881 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PE2 2 0 udp-1e0d332a-8fae-46ab-b48d-539b1fc64c91 
+Nov 28 12:42:06.881 HYPERVISOR: exec_cmd: vm get_status PE2 
+Nov 28 12:42:07.299 HYPERVISOR: exec_cmd: nio create_udp udp-491fd204-2a54-4741-b131-5fdb65ffe372 10120 127.0.0.1 10121 
+Nov 28 12:42:07.301 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PE2 3 0 udp-491fd204-2a54-4741-b131-5fdb65ffe372 
+Nov 28 12:42:07.301 HYPERVISOR: exec_cmd: vm get_status PE2 
+Nov 28 12:50:21.084 HYPERVISOR: exec_cmd: vm set_ios PE2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:25.152 HYPERVISOR: exec_cmd: vm set_ios PE2 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 13:01:13.172 HYPERVISOR: exec_cmd: vm get_status PE2 
+Nov 28 13:01:13.173 HYPERVISOR: exec_cmd: vm extract_config PE2 
+Nov 28 13:01:13.332 HYPERVISOR: exec_cmd: vm get_status PE2 
+Nov 28 13:01:13.333 HYPERVISOR: exec_cmd: vm extract_config PE2 
+Nov 28 13:01:13.334 HYPERVISOR: exec_cmd: vm delete PE2 
+Nov 28 13:01:13.334 VM: VM PE2 destroyed.
+Nov 28 13:01:13.335 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 28 13:01:13.453 HYPERVISOR: Stopped.
+Nov 28 13:01:13.456 GENERAL: reset done.

@@ -25,3 +25,29 @@ Nov 28 12:41:59.829 HYPERVISOR: exec_cmd: vm get_status P4
 Nov 28 12:41:59.829 HYPERVISOR: exec_cmd: vm slot_add_binding P4 3 0 PA-GE 
 Nov 28 12:41:59.830 HYPERVISOR: exec_cmd: vm get_status P4 
 Nov 28 12:41:59.830 HYPERVISOR: exec_cmd: vm slot_add_binding P4 4 0 PA-GE 
+Nov 28 12:42:06.219 HYPERVISOR: exec_cmd: nio create_udp udp-55c0c9b7-b9f7-4ea2-b92f-79319a64d61a 10080 127.0.0.1 10081 
+Nov 28 12:42:06.469 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P4 1 0 udp-55c0c9b7-b9f7-4ea2-b92f-79319a64d61a 
+Nov 28 12:42:06.469 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 12:42:06.541 HYPERVISOR: exec_cmd: nio create_udp udp-75166380-2cfe-404e-bbb5-26ad9181c5c8 10084 127.0.0.1 10085 
+Nov 28 12:42:06.543 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P4 2 0 udp-75166380-2cfe-404e-bbb5-26ad9181c5c8 
+Nov 28 12:42:06.543 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 12:42:06.958 HYPERVISOR: exec_cmd: nio create_udp udp-649c619d-dee9-4e3a-8cec-790f50726572 10098 127.0.0.1 10099 
+Nov 28 12:42:06.960 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P4 3 0 udp-649c619d-dee9-4e3a-8cec-790f50726572 
+Nov 28 12:42:06.960 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 12:42:07.205 HYPERVISOR: exec_cmd: nio create_udp udp-7d2c6b50-f394-4a87-a781-15bcd2a5698a 10116 127.0.0.1 10117 
+Nov 28 12:42:07.207 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P4 4 0 udp-7d2c6b50-f394-4a87-a781-15bcd2a5698a 
+Nov 28 12:42:07.207 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 12:46:34.201 HYPERVISOR: exec_cmd: vm set_ios P4 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:46:36.787 HYPERVISOR: exec_cmd: vm set_ios P4 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:46:39.187 HYPERVISOR: exec_cmd: vm set_ios P4 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:21.087 HYPERVISOR: exec_cmd: vm set_ios P4 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:25.226 HYPERVISOR: exec_cmd: vm set_ios P4 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 13:01:13.167 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 13:01:13.168 HYPERVISOR: exec_cmd: vm extract_config P4 
+Nov 28 13:01:13.502 HYPERVISOR: exec_cmd: vm get_status P4 
+Nov 28 13:01:13.503 HYPERVISOR: exec_cmd: vm extract_config P4 
+Nov 28 13:01:13.505 HYPERVISOR: exec_cmd: vm delete P4 
+Nov 28 13:01:13.505 VM: VM P4 destroyed.
+Nov 28 13:01:13.506 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 28 13:01:13.955 HYPERVISOR: Stopped.
+Nov 28 13:01:13.955 GENERAL: reset done.

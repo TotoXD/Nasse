@@ -25,3 +25,26 @@ Nov 28 12:41:58.726 HYPERVISOR: exec_cmd: vm get_status P3
 Nov 28 12:41:58.726 HYPERVISOR: exec_cmd: vm slot_add_binding P3 3 0 PA-GE 
 Nov 28 12:41:58.726 HYPERVISOR: exec_cmd: vm get_status P3 
 Nov 28 12:41:58.727 HYPERVISOR: exec_cmd: vm slot_add_binding P3 4 0 PA-GE 
+Nov 28 12:42:05.898 HYPERVISOR: exec_cmd: nio create_udp udp-c08695b0-4714-47d9-a8c2-96fca6bda6ee 10074 127.0.0.1 10075 
+Nov 28 12:42:06.140 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P3 1 0 udp-c08695b0-4714-47d9-a8c2-96fca6bda6ee 
+Nov 28 12:42:06.141 HYPERVISOR: exec_cmd: vm get_status P3 
+Nov 28 12:42:06.210 HYPERVISOR: exec_cmd: nio create_udp udp-940bdc24-f5e4-4c9b-90d8-a8fa10791325 10078 127.0.0.1 10079 
+Nov 28 12:42:06.212 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P3 2 0 udp-940bdc24-f5e4-4c9b-90d8-a8fa10791325 
+Nov 28 12:42:06.212 HYPERVISOR: exec_cmd: vm get_status P3 
+Nov 28 12:42:07.038 HYPERVISOR: exec_cmd: nio create_udp udp-911e8dbb-6502-4a7c-8ad8-4442bfdee543 10104 127.0.0.1 10105 
+Nov 28 12:42:07.040 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P3 3 0 udp-911e8dbb-6502-4a7c-8ad8-4442bfdee543 
+Nov 28 12:42:07.041 HYPERVISOR: exec_cmd: vm get_status P3 
+Nov 28 12:42:07.122 HYPERVISOR: exec_cmd: nio create_udp udp-c6472b0a-4e3b-41c3-8cfd-5e2da0626c42 10110 127.0.0.1 10111 
+Nov 28 12:42:07.124 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P3 4 0 udp-c6472b0a-4e3b-41c3-8cfd-5e2da0626c42 
+Nov 28 12:42:07.125 HYPERVISOR: exec_cmd: vm get_status P3 
+Nov 28 12:50:21.324 HYPERVISOR: exec_cmd: vm set_ios P3 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:25.612 HYPERVISOR: exec_cmd: vm set_ios P3 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 13:01:13.166 HYPERVISOR: exec_cmd: vm get_status P3 
+Nov 28 13:01:13.167 HYPERVISOR: exec_cmd: vm extract_config P3 
+Nov 28 13:01:13.316 HYPERVISOR: exec_cmd: vm get_status P3 
+Nov 28 13:01:13.316 HYPERVISOR: exec_cmd: vm extract_config P3 
+Nov 28 13:01:13.317 HYPERVISOR: exec_cmd: vm delete P3 
+Nov 28 13:01:13.317 VM: VM P3 destroyed.
+Nov 28 13:01:13.318 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 28 13:01:13.453 HYPERVISOR: Stopped.
+Nov 28 13:01:13.453 GENERAL: reset done.

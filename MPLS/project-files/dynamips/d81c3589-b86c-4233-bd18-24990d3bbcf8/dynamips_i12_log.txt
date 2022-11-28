@@ -25,3 +25,28 @@ Nov 28 12:41:58.161 HYPERVISOR: exec_cmd: vm get_status P1
 Nov 28 12:41:58.161 HYPERVISOR: exec_cmd: vm slot_add_binding P1 3 0 PA-GE 
 Nov 28 12:41:58.162 HYPERVISOR: exec_cmd: vm get_status P1 
 Nov 28 12:41:58.162 HYPERVISOR: exec_cmd: vm slot_add_binding P1 4 0 PA-GE 
+Nov 28 12:42:05.247 HYPERVISOR: exec_cmd: nio create_udp udp-4273c77d-f02f-454c-8913-e4d127207ec1 10062 127.0.0.1 10063 
+Nov 28 12:42:05.489 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P1 1 0 udp-4273c77d-f02f-454c-8913-e4d127207ec1 
+Nov 28 12:42:05.489 HYPERVISOR: exec_cmd: vm get_status P1 
+Nov 28 12:42:05.562 HYPERVISOR: exec_cmd: nio create_udp udp-0ed6ef8d-1131-4fbf-9b27-d9dc3b5ceba3 10066 127.0.0.1 10067 
+Nov 28 12:42:05.564 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P1 2 0 udp-0ed6ef8d-1131-4fbf-9b27-d9dc3b5ceba3 
+Nov 28 12:42:05.565 HYPERVISOR: exec_cmd: vm get_status P1 
+Nov 28 12:42:06.950 HYPERVISOR: exec_cmd: nio create_udp udp-6629b6e5-7886-4fe7-afec-a92dc1596713 10096 127.0.0.1 10097 
+Nov 28 12:42:06.951 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P1 3 0 udp-6629b6e5-7886-4fe7-afec-a92dc1596713 
+Nov 28 12:42:06.951 HYPERVISOR: exec_cmd: vm get_status P1 
+Nov 28 12:42:07.112 HYPERVISOR: exec_cmd: nio create_udp udp-b245a38d-581c-4942-ac3d-6ec058d027a5 10108 127.0.0.1 10109 
+Nov 28 12:42:07.114 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P1 4 0 udp-b245a38d-581c-4942-ac3d-6ec058d027a5 
+Nov 28 12:42:07.115 HYPERVISOR: exec_cmd: vm get_status P1 
+Nov 28 12:50:21.404 HYPERVISOR: exec_cmd: vm set_ios P1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:25.618 HYPERVISOR: exec_cmd: vm set_ios P1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:27.212 HYPERVISOR: exec_cmd: vm set_ios P1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 12:50:27.446 HYPERVISOR: exec_cmd: vm set_ios P1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Nov 28 13:01:13.159 HYPERVISOR: exec_cmd: vm get_status P1 
+Nov 28 13:01:13.161 HYPERVISOR: exec_cmd: vm extract_config P1 
+Nov 28 13:01:13.739 HYPERVISOR: exec_cmd: vm get_status P1 
+Nov 28 13:01:13.740 HYPERVISOR: exec_cmd: vm extract_config P1 
+Nov 28 13:01:13.740 HYPERVISOR: exec_cmd: vm delete P1 
+Nov 28 13:01:13.740 VM: VM P1 destroyed.
+Nov 28 13:01:13.741 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 28 13:01:13.955 HYPERVISOR: Stopped.
+Nov 28 13:01:13.955 GENERAL: reset done.

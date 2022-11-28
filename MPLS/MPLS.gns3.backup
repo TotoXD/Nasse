@@ -27,15 +27,6 @@
                 "z": 2
             },
             {
-                "drawing_id": "5fa4243b-bdf4-40ad-b23b-fc7234a49653",
-                "locked": false,
-                "rotation": 0,
-                "svg": "<svg height=\"24\" width=\"139\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">SETUP MPLS BGP 4TC</text></svg>",
-                "x": -161,
-                "y": -216,
-                "z": 2
-            },
-            {
                 "drawing_id": "48a36b91-7078-4c0a-88c3-0d104124b921",
                 "locked": false,
                 "rotation": 0,
@@ -1753,8 +1744,8 @@
                 "symbol": ":/symbols/classic/router.svg",
                 "template_id": "e8bbb4f5-5c3f-4060-a4f2-2bc55c9b3cbe",
                 "width": 66,
-                "x": -818,
-                "y": -88,
+                "x": -884,
+                "y": -92,
                 "z": 1
             },
             {
@@ -1822,8 +1813,8 @@
                 "symbol": ":/symbols/classic/router.svg",
                 "template_id": "e8bbb4f5-5c3f-4060-a4f2-2bc55c9b3cbe",
                 "width": 66,
-                "x": -632,
-                "y": 21,
+                "x": -698,
+                "y": 16,
                 "z": 1
             },
             {
@@ -1891,8 +1882,8 @@
                 "symbol": ":/symbols/classic/router.svg",
                 "template_id": "e8bbb4f5-5c3f-4060-a4f2-2bc55c9b3cbe",
                 "width": 66,
-                "x": -814,
-                "y": 148,
+                "x": -880,
+                "y": 143,
                 "z": 1
             },
             {
@@ -2236,8 +2227,8 @@
                 "symbol": ":/symbols/classic/router.svg",
                 "template_id": "e8bbb4f5-5c3f-4060-a4f2-2bc55c9b3cbe",
                 "width": 66,
-                "x": -4,
-                "y": 149,
+                "x": -8,
+                "y": 148,
                 "z": 1
             },
             {
@@ -2541,8 +2532,8 @@
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
                 "width": 65,
-                "x": -910,
-                "y": -249,
+                "x": -976,
+                "y": -253,
                 "z": 1
             },
             {
@@ -2570,8 +2561,8 @@
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
                 "width": 65,
-                "x": -986,
-                "y": 180,
+                "x": -1052,
+                "y": 175,
                 "z": 1
             },
             {
@@ -2599,8 +2590,8 @@
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
                 "width": 65,
-                "x": -1004,
-                "y": -117,
+                "x": -1070,
+                "y": -121,
                 "z": 1
             },
             {
@@ -2628,8 +2619,8 @@
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
                 "width": 65,
-                "x": -865,
-                "y": 288,
+                "x": -931,
+                "y": 282,
                 "z": 1
             },
             {
@@ -2753,5 +2744,5 @@
     "type": "topology",
     "variables": null,
     "version": "2.2.35.1",
-    "zoom": 59
+    "zoom": 50
 }
