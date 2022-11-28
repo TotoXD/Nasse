@@ -11,11 +11,17 @@
 # Config pour chaque router
 --------------------------------
 configure terminal
+
 interface gigabitEthernet X/0
+
 ip address 192.168.XX.X 255.255.255.0
+
 no shutdown
+
 exit
+
 exit
+
 copy run start
 --------------------------------
 
