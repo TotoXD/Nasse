@@ -1,6 +1,6 @@
 Etapes du projet:
 
-◉ I. Configurer MPLS à la main sur tout le réseau
+- I. Configurer MPLS à la main sur tout le réseau
 	
 	1. Ajouter des routers et des links
 
