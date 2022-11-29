@@ -34,14 +34,14 @@ no shutdown
 exit
 exit
 copy run start
---------------------------------
 
-	- Commandes utiles:
+	=> Commandes utiles:
 
 (show neighbours)
 configure terminal
 do sho cdp nei
 
+(show everything)
 show running-config
 
 (reset interface)
@@ -51,11 +51,11 @@ default interface gi 1/1
 copy run start
 
 
-	4. Configure OSPF sur les routeurs et ajouter les routes
+	=> Configurer OSPF sur les routeurs et ajouter les routes
 
-	5. ...
+	=> Bgp...Mpls....
 
-◉ II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
+# II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
 
 
 
