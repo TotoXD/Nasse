@@ -35,7 +35,7 @@ exit
 exit
 copy run start
 
-	=> Commandes utiles:
+	/!\ Commandes utiles /!\
 
 (show neighbours)
 configure terminal
