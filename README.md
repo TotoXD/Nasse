@@ -10,13 +10,13 @@
 
 	=> Exemples de config pour chaque router (pensez à save les config avec copy run start)
 
-configure terminal
-interface gigabitEthernet 4/0
-ip address 192.168.11.1 255.255.255.0
-no shutdown
-exit
-exit
-copy run start
+	configure terminal
+	interface gigabitEthernet 4/0
+	ip address 192.168.11.1 255.255.255.0
+	no shutdown
+	exit
+	exit
+	copy run start
 
 (Exemple pour plusieurs interfaces à la fois)
 configure terminal
