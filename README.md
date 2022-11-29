@@ -45,7 +45,7 @@ do sho cdp nei
 show running-config
 
 (reset interface)
-default interface gi 1/1
+default interface gi x/x
 
 (save config)
 copy run start
