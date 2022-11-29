@@ -1,6 +1,6 @@
 # Nasse
 
-# I. Configurer MPLS à la main sur tout le réseau
+◉ I. Configurer MPLS à la main sur tout le réseau
 	
 	1. Ajouter des routers et des links
 
@@ -8,7 +8,7 @@
 
 	3. Configurer une IP sur chacune des interfaces des routeurs
 
-◉ Config pour chaque router
+	- Config pour chaque router
 --------------------------------
 configure terminal
 interface gigabitEthernet 4/0
@@ -35,7 +35,7 @@ exit
 copy run start
 --------------------------------
 
-◉ Commandes utiles:
+	- Commandes utiles:
 
 (show neighbours)
 configure terminal
@@ -54,7 +54,7 @@ copy run start
 
 	5. ...
 
-# II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
+◉ II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
 
 
 
