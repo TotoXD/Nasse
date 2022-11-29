@@ -8,7 +8,7 @@
 
 	3. Configurer une IP sur chacune des interfaces des routeurs
 
-# Config pour chaque router
+- Config pour chaque router
 --------------------------------
 configure terminal
 interface gigabitEthernet 4/0
@@ -17,7 +17,7 @@ no shutdown
 exit
 exit
 copy run start
--------------------------------- (Pour plusieurs interfaces à la fois)
+-------------------------------- (Exemple pour plusieurs interfaces à la fois)
 configure terminal
 interface gigabitEthernet 1/0
 ip address 192.168.22.2 255.255.255.0
@@ -35,7 +35,7 @@ exit
 copy run start
 --------------------------------
 
-# Commandes utiles:
+- Commandes utiles:
 
 (show neighbours)
 configure terminal
@@ -55,4 +55,9 @@ copy run start
 	5. ...
 
 # II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
+
+
+
+
+
 
