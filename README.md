@@ -8,7 +8,7 @@
 
 	3. Configurer une IP sur chacune des interfaces des routeurs
 
-- Config pour chaque router
+◉ Config pour chaque router
 --------------------------------
 configure terminal
 interface gigabitEthernet 4/0
@@ -35,7 +35,7 @@ exit
 copy run start
 --------------------------------
 
-- Commandes utiles:
+◉ Commandes utiles:
 
 (show neighbours)
 configure terminal
