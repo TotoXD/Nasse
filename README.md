@@ -1,4 +1,4 @@
-Etapes du projet:
+# Etapes du projet:
 
 - I. Configurer MPLS à la main sur tout le réseau
 	
