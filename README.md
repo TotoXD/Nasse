@@ -2,13 +2,13 @@ Etapes du projet:
 
 - I. Configurer MPLS à la main sur tout le réseau
 	
-	1. Ajouter des routers et des links
+	=> Ajouter des routers et des links (Fait)
 
-	2. Ajouter des switchs avec des PC derriere chaque CE/CS (peut être plus tard)
+	=> Ajouter des switchs avec des PC derriere chaque CE/CS (peut être plus tard)
 
-	3. Configurer une IP sur chacune des interfaces des routeurs
+	=> Configurer une IP sur chacune des interfaces des routeurs (Fait)
 
-	- Config pour chaque router
+	=> Exemples de config pour chaque router (pensez à save les config avec copy run start)
 
 configure terminal
 interface gigabitEthernet 4/0
