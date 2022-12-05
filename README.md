@@ -72,6 +72,13 @@ router ospf x (process-id, même pour un réseau)
 show ip ospf interface brief
 
 	5. ...
+	6. Ajouter MPLS
+	7. Ajouter BGP entre CE-PE
+	8. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)
+	9. Automatiser l'ajout de client dans le réseaux
+	10. Favoriser certaines routes, comme des Peers, pour payer moins
+	11. Pouvoir mettre des règles sur les nouveaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
+
 
 # II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
 

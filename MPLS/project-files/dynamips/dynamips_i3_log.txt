@@ -1,0 +1,25 @@
+Dec 05 10:43:03.849 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 05 10:43:03.851 HYPERVISOR: Started on IP = localhost, TCP port = 62643.
+Dec 05 10:43:04.325 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 05 10:43:04.325 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips 
+Dec 05 10:43:04.325 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips
+Dec 05 10:43:04.326 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\fe91aa2b-2240-4fab-996c-6c4d10d818b2 
+Dec 05 10:43:04.326 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\fe91aa2b-2240-4fab-996c-6c4d10d818b2
+Dec 05 10:43:04.327 HYPERVISOR: exec_cmd: vm create P1 9 c7200 
+Dec 05 10:43:04.329 VM: VM P1 created.
+Dec 05 10:43:04.329 HYPERVISOR: exec_cmd: vm set_con_tcp_port P1 5012 
+Dec 05 10:43:04.330 HYPERVISOR: exec_cmd: c7200 get_mac_addr P1 
+Dec 05 10:43:04.330 HYPERVISOR: exec_cmd: vm get_status P1 
+Dec 05 10:43:04.330 HYPERVISOR: exec_cmd: vm slot_add_binding P1 0 0 C7200-IO-FE 
+Dec 05 10:43:04.330 HYPERVISOR: exec_cmd: vm set_disk0 P1 0 
+Dec 05 10:43:04.330 HYPERVISOR: exec_cmd: vm set_exec_area P1 64 
+Dec 05 10:43:04.331 HYPERVISOR: exec_cmd: vm set_ios P1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Dec 05 10:43:04.331 HYPERVISOR: exec_cmd: c7200 set_mac_addr P1 ca09.580c.0000 
+Dec 05 10:43:04.331 HYPERVISOR: exec_cmd: vm set_nvram P1 512 
+Dec 05 10:43:04.331 HYPERVISOR: exec_cmd: vm set_ram P1 512 
+Dec 05 10:43:04.331 HYPERVISOR: exec_cmd: vm get_status P1 
+Dec 05 10:43:04.332 HYPERVISOR: exec_cmd: vm slot_add_binding P1 1 0 PA-GE 
+Dec 05 10:43:04.332 HYPERVISOR: exec_cmd: vm get_status P1 
+Dec 05 10:43:04.332 HYPERVISOR: exec_cmd: vm slot_add_binding P1 2 0 PA-GE 
+Dec 05 10:43:04.332 HYPERVISOR: exec_cmd: vm get_status P1 
+Dec 05 10:43:04.332 HYPERVISOR: exec_cmd: vm slot_add_binding P1 3 0 PA-GE 

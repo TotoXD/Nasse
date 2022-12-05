@@ -1,0 +1,27 @@
+Dec 05 10:43:03.311 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 05 10:43:03.313 HYPERVISOR: Started on IP = localhost, TCP port = 62640.
+Dec 05 10:43:03.784 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 05 10:43:03.785 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips 
+Dec 05 10:43:03.785 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips
+Dec 05 10:43:03.785 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\856f0560-c5e1-4056-90d0-4cf31a7f6928 
+Dec 05 10:43:03.785 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\856f0560-c5e1-4056-90d0-4cf31a7f6928
+Dec 05 10:43:03.786 HYPERVISOR: exec_cmd: vm create PE1 8 c7200 
+Dec 05 10:43:03.789 VM: VM PE1 created.
+Dec 05 10:43:03.790 HYPERVISOR: exec_cmd: vm set_con_tcp_port PE1 5007 
+Dec 05 10:43:03.790 HYPERVISOR: exec_cmd: c7200 get_mac_addr PE1 
+Dec 05 10:43:03.790 HYPERVISOR: exec_cmd: vm get_status PE1 
+Dec 05 10:43:03.790 HYPERVISOR: exec_cmd: vm slot_add_binding PE1 0 0 C7200-IO-FE 
+Dec 05 10:43:03.791 HYPERVISOR: exec_cmd: vm set_disk0 PE1 0 
+Dec 05 10:43:03.791 HYPERVISOR: exec_cmd: vm set_exec_area PE1 64 
+Dec 05 10:43:03.792 HYPERVISOR: exec_cmd: vm set_ios PE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Dec 05 10:43:03.792 HYPERVISOR: exec_cmd: c7200 set_mac_addr PE1 ca08.2128.0000 
+Dec 05 10:43:03.793 HYPERVISOR: exec_cmd: vm set_nvram PE1 512 
+Dec 05 10:43:03.793 HYPERVISOR: exec_cmd: vm set_ram PE1 512 
+Dec 05 10:43:03.794 HYPERVISOR: exec_cmd: vm get_status PE1 
+Dec 05 10:43:03.794 HYPERVISOR: exec_cmd: vm slot_add_binding PE1 1 0 PA-GE 
+Dec 05 10:43:03.794 HYPERVISOR: exec_cmd: vm get_status PE1 
+Dec 05 10:43:03.794 HYPERVISOR: exec_cmd: vm slot_add_binding PE1 2 0 PA-GE 
+Dec 05 10:43:03.795 HYPERVISOR: exec_cmd: vm get_status PE1 
+Dec 05 10:43:03.795 HYPERVISOR: exec_cmd: vm slot_add_binding PE1 3 0 PA-GE 
+Dec 05 10:43:03.795 HYPERVISOR: exec_cmd: vm get_status PE1 
+Dec 05 10:43:03.795 HYPERVISOR: exec_cmd: vm slot_add_binding PE1 4 0 PA-GE 

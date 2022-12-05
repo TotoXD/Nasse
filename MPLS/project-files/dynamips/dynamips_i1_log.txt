@@ -1,0 +1,25 @@
+Dec 05 10:43:03.140 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 05 10:43:03.141 HYPERVISOR: Started on IP = localhost, TCP port = 62631.
+Dec 05 10:43:03.238 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 05 10:43:03.238 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips 
+Dec 05 10:43:03.243 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips
+Dec 05 10:43:03.244 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\61b60946-41da-41c9-98dc-2681e966b5e8 
+Dec 05 10:43:03.244 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasse\MPLS\project-files\dynamips\61b60946-41da-41c9-98dc-2681e966b5e8
+Dec 05 10:43:03.244 HYPERVISOR: exec_cmd: vm create CE1 6 c7200 
+Dec 05 10:43:03.247 VM: VM CE1 created.
+Dec 05 10:43:03.247 HYPERVISOR: exec_cmd: vm set_con_tcp_port CE1 5005 
+Dec 05 10:43:03.247 HYPERVISOR: exec_cmd: c7200 get_mac_addr CE1 
+Dec 05 10:43:03.248 HYPERVISOR: exec_cmd: vm get_status CE1 
+Dec 05 10:43:03.248 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 0 0 C7200-IO-FE 
+Dec 05 10:43:03.248 HYPERVISOR: exec_cmd: vm set_disk0 CE1 0 
+Dec 05 10:43:03.248 HYPERVISOR: exec_cmd: vm set_exec_area CE1 64 
+Dec 05 10:43:03.250 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Dec 05 10:43:03.251 HYPERVISOR: exec_cmd: c7200 set_mac_addr CE1 ca06.5e84.0000 
+Dec 05 10:43:03.251 HYPERVISOR: exec_cmd: vm set_nvram CE1 512 
+Dec 05 10:43:03.251 HYPERVISOR: exec_cmd: vm set_ram CE1 512 
+Dec 05 10:43:03.251 HYPERVISOR: exec_cmd: vm get_status CE1 
+Dec 05 10:43:03.251 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 1 0 PA-GE 
+Dec 05 10:43:03.252 HYPERVISOR: exec_cmd: vm get_status CE1 
+Dec 05 10:43:03.252 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 2 0 PA-GE 
+Dec 05 10:43:03.252 HYPERVISOR: exec_cmd: vm get_status CE1 
+Dec 05 10:43:03.252 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 3 0 PA-GE 
