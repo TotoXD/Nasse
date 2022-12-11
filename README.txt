@@ -86,11 +86,29 @@ conf t
 do sho ip bgp neighbors
 
 	6. Ajouter MPLS
-	7. Ajouter BGP entre CE-PE
-	8. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)
-	9. Automatiser l'ajout de client dans le réseaux
-	10. Favoriser certaines routes, comme des Peers, pour payer moins
-	11. Pouvoir mettre des règles sur les nouveaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
+
+Config MPLS sur les routeurs (a faire sur toutes les interfaces du backbone)
+------------------------------
+configure terminal
+interface gigabitEthernet 1/0
+ip cef
+interface gigabitEthernet 1/0
+ip route-cache cef
+mpls mtu 1500
+mpls ip
+mpls label protocol ldp
+
+(CEF = cisco express forwarding)
+
+
+	7. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)
+	(=> C ce que je disais PL du coup, c'est bien des AS différents mais juste le mm client)
+
+	8. Automatiser l'ajout de client dans le réseaux
+
+	9. Favoriser certaines routes, comme des Peers, pour payer moins
+
+	10. Pouvoir mettre des règles sur les nouveaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
 
 
 # II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
