@@ -67,11 +67,24 @@ copy run start
 area (numéro de l'AS)
 router ospf x (process-id, même pour un réseau)
 
-
 (show ospf interfaces)
 show ip ospf interface brief
 
-	5. ...
+	5. Ajouter BGP entre CE-PE
+
+Config BGP sur les routeurs
+------------------------------
+configure terminal
+router bgp AS
+neighbor 192.168.31.1 remote-as 500
+exit
+exit
+copy run start
+
+(Pour montrer voisin)
+conf t
+do sho ip bgp neighbors
+
 	6. Ajouter MPLS
 	7. Ajouter BGP entre CE-PE
 	8. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)

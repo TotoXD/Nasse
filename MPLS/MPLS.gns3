@@ -19,7 +19,7 @@
         "drawings": [
             {
                 "drawing_id": "48a36b91-7078-4c0a-88c3-0d104124b921",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"47\" width=\"232\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"24.0\">MPLS Backbone</text></svg>",
                 "x": -187,
@@ -28,7 +28,7 @@
             },
             {
                 "drawing_id": "77473fee-98e8-4e46-b75e-2dfc96ea6a96",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"47\" width=\"139\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"24.0\">Providers</text></svg>",
                 "x": -154,
@@ -37,7 +37,7 @@
             },
             {
                 "drawing_id": "e7a56e45-66a3-416e-ae4b-e664fda3b7e0",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
                 "x": -752,
@@ -46,7 +46,7 @@
             },
             {
                 "drawing_id": "bc1b1f52-2a33-4dbb-844b-98717887ff48",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": -717,
@@ -55,16 +55,16 @@
             },
             {
                 "drawing_id": "ec7eb149-bccf-42b4-b494-5fe72f3203b4",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
-                "x": -625,
-                "y": -303,
+                "x": -598,
+                "y": -311,
                 "z": 2
             },
             {
                 "drawing_id": "f771e060-abdf-4a7c-bb43-1f1d64978f70",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
                 "x": -697,
@@ -73,7 +73,7 @@
             },
             {
                 "drawing_id": "ac7549ff-c1ca-4f53-93b0-6e334fb993ac",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
                 "x": -631,
@@ -82,7 +82,7 @@
             },
             {
                 "drawing_id": "ae37f19c-068c-4962-8576-87ca9ea6caf6",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": -768,
@@ -91,7 +91,7 @@
             },
             {
                 "drawing_id": "4589c0ec-20af-4b4c-9ae8-affbf94c6d31",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 4/0</text></svg>",
                 "x": -501,
@@ -100,7 +100,7 @@
             },
             {
                 "drawing_id": "2ce11a85-9f11-4115-a490-f9cf308cbed5",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
                 "x": -501,
@@ -109,7 +109,7 @@
             },
             {
                 "drawing_id": "5182abd6-95d8-410e-816f-ce19b5bfb0a1",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": -373,
@@ -118,7 +118,7 @@
             },
             {
                 "drawing_id": "1814ff41-a851-4774-a31e-396e77a301cd",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
                 "x": -414,
@@ -127,7 +127,7 @@
             },
             {
                 "drawing_id": "be9dd4a2-045a-4ef1-8843-06c50bb11a73",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
                 "x": -283,
@@ -136,11 +136,11 @@
             },
             {
                 "drawing_id": "7e3db846-0f0a-43ce-aa5e-5e33c534b20c",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"479.3944279230838\" width=\"735.8704468619337\"><ellipse cx=\"367\" cy=\"239\" fill=\"#4bff51\" fill-opacity=\"0.39215686274509803\" rx=\"368\" ry=\"240\" stroke=\"#000000\" stroke-dasharray=\"25, 25\" stroke-width=\"2\" /></svg>",
-                "x": -453,
-                "y": -280,
+                "x": -456,
+                "y": -294,
                 "z": 0
             },
             {
@@ -154,7 +154,7 @@
             },
             {
                 "drawing_id": "a528cec9-9108-461f-8b04-722017514d0e",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
                 "x": -200,
@@ -163,7 +163,7 @@
             },
             {
                 "drawing_id": "0c2becfb-c992-473d-9c69-8079e631567a",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
                 "x": -251,
@@ -172,7 +172,7 @@
             },
             {
                 "drawing_id": "08afbcfc-690d-4275-a095-bff9e3dd85c9",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
                 "x": 277,
@@ -181,7 +181,7 @@
             },
             {
                 "drawing_id": "8f7fc4ca-f207-46ca-86af-b90254466f03",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
                 "x": -20,
@@ -190,7 +190,7 @@
             },
             {
                 "drawing_id": "ea904fea-083f-4c8a-83c9-e0780874a314",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"46\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0\n</text></svg>",
                 "x": -48,
@@ -199,7 +199,7 @@
             },
             {
                 "drawing_id": "d982f696-ba0a-4d58-adab-d01fbe194a00",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
                 "x": -296,
@@ -208,7 +208,7 @@
             },
             {
                 "drawing_id": "3cd4e87a-cf60-4fd6-a980-06761a0a4bd8",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": -175,
@@ -217,7 +217,7 @@
             },
             {
                 "drawing_id": "e5e33366-3465-49b6-9baa-91c42e7ded42",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": 74,
@@ -226,7 +226,7 @@
             },
             {
                 "drawing_id": "511936e2-15a4-44af-a60b-92096ac9466b",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
                 "x": -46,
@@ -235,7 +235,7 @@
             },
             {
                 "drawing_id": "b80f2673-8b13-4699-ab56-60e1a7f44312",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": 146,
@@ -244,7 +244,7 @@
             },
             {
                 "drawing_id": "a55fd2bb-54e0-46ca-9463-6a0ab825aeb2",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
                 "x": 147,
@@ -253,7 +253,7 @@
             },
             {
                 "drawing_id": "d36f681d-21e3-4625-bde4-56047248a710",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 4/0</text></svg>",
                 "x": 276,
@@ -262,7 +262,7 @@
             },
             {
                 "drawing_id": "b74dcea8-b4ac-4e14-9acc-8a438fe786fc",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
                 "x": 422,
@@ -271,7 +271,7 @@
             },
             {
                 "drawing_id": "f3e73438-4417-4067-a457-08bb3730615e",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": 543,
@@ -280,7 +280,7 @@
             },
             {
                 "drawing_id": "04482222-ae81-4840-9b1a-996640bb6cbf",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
                 "x": 508,
@@ -289,7 +289,7 @@
             },
             {
                 "drawing_id": "190615bb-4f21-405e-8b8e-3a4746da1ebb",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
                 "x": 439,
@@ -298,7 +298,7 @@
             },
             {
                 "drawing_id": "d3c26882-4257-46e4-a78c-2e7fb00272fe",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": 570,
@@ -307,7 +307,7 @@
             },
             {
                 "drawing_id": "9d7dd102-c861-41ae-951b-d0cd82b9d2c8",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
                 "x": 523,
@@ -316,25 +316,25 @@
             },
             {
                 "drawing_id": "c28d9b78-33ca-463b-b88d-f5b6f94c90b6",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.10.0/24</text></svg>",
-                "x": -722,
-                "y": -177,
+                "x": -576,
+                "y": -261,
                 "z": 2
             },
             {
                 "drawing_id": "e8723ca1-a470-431a-bb84-bd926f2b202d",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.11.0/24</text></svg>",
-                "x": -724,
-                "y": 53,
+                "x": -586,
+                "y": 141,
                 "z": 2
             },
             {
                 "drawing_id": "f4e14b57-6e73-49d3-8106-c4d46448a07f",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.20.0/24</text></svg>",
                 "x": -487,
@@ -343,7 +343,7 @@
             },
             {
                 "drawing_id": "4c144868-bc00-4772-859c-93ede85a4a0f",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.21.0/24</text></svg>",
                 "x": -475,
@@ -352,7 +352,7 @@
             },
             {
                 "drawing_id": "47af0222-8769-4bef-8939-ad50a6027cff",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.22.0/24</text></svg>",
                 "x": -171,
@@ -361,7 +361,7 @@
             },
             {
                 "drawing_id": "9c94f616-6ce4-45a6-8105-7355b901e4d3",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.23.0/24</text></svg>",
                 "x": -174,
@@ -370,7 +370,7 @@
             },
             {
                 "drawing_id": "6cede9c1-f3d0-4be9-8862-5b58c7462cf7",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.24.0/24</text></svg>",
                 "x": -295,
@@ -379,7 +379,7 @@
             },
             {
                 "drawing_id": "128e5d8f-0a9e-4208-8214-6d5f46dc12a7",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.25.0/24</text></svg>",
                 "x": -64,
@@ -388,7 +388,7 @@
             },
             {
                 "drawing_id": "e0d5cf2b-4c2e-49ee-bdd4-4afe5358531e",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.26.0/24</text></svg>",
                 "x": 116,
@@ -397,7 +397,7 @@
             },
             {
                 "drawing_id": "30035891-178a-4bd1-9d35-8b138a7f6836",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.27.0/24</text></svg>",
                 "x": 98,
@@ -406,25 +406,25 @@
             },
             {
                 "drawing_id": "599dbd35-1329-439e-9861-cc6e55b3ac51",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.30.0/24</text></svg>",
-                "x": 354,
-                "y": -159,
+                "x": 218,
+                "y": -250,
                 "z": 2
             },
             {
                 "drawing_id": "d5463b00-3b03-4563-bc69-af2e4388be87",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.31.0/24</text></svg>",
-                "x": 356,
-                "y": 26,
+                "x": 230,
+                "y": 100,
                 "z": 2
             },
             {
                 "drawing_id": "3311024c-7d1b-4c1f-9a5a-fcb6ae73150b",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": 65,
@@ -433,7 +433,7 @@
             },
             {
                 "drawing_id": "bde11f05-2509-4aa5-bc74-00bc645f3146",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
                 "x": -164,
@@ -442,7 +442,7 @@
             },
             {
                 "drawing_id": "86c3db07-f2ec-45d4-9835-57b2d8cf97f4",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
                 "x": -23,
@@ -451,7 +451,7 @@
             },
             {
                 "drawing_id": "1e6820bc-831f-48d1-b2d2-4fd7e3874b11",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -657,
@@ -460,7 +460,7 @@
             },
             {
                 "drawing_id": "c74181a8-ba2b-4a35-83f0-2b654a6c5ea2",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -738,
@@ -469,7 +469,7 @@
             },
             {
                 "drawing_id": "2c44d666-6e07-4b67-90ef-ae073a5a7da9",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -707,
@@ -478,7 +478,7 @@
             },
             {
                 "drawing_id": "ed9cc87d-0719-4ccb-9714-92d200cadb6f",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": -487,
@@ -487,7 +487,7 @@
             },
             {
                 "drawing_id": "e4e1ff73-6a76-470b-99ba-a87ab3ac76b0",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -442,
@@ -496,7 +496,7 @@
             },
             {
                 "drawing_id": "d94c2cf5-4e90-4cdb-88d6-76f2cb9d631f",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -367,
@@ -505,7 +505,7 @@
             },
             {
                 "drawing_id": "c40ac0b7-dca0-477f-91d9-d8dacfc5e82d",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -387,
@@ -514,7 +514,7 @@
             },
             {
                 "drawing_id": "be0cad82-ba64-4461-8e79-280cc77b5813",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -725,
@@ -523,7 +523,7 @@
             },
             {
                 "drawing_id": "3b0ba3dc-9b55-4f3c-9eb8-decbb750d01b",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -720,
@@ -532,7 +532,7 @@
             },
             {
                 "drawing_id": "e7df3201-840d-454f-bc76-eaf5c0f7edca",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": -651,
@@ -541,7 +541,7 @@
             },
             {
                 "drawing_id": "26696663-a910-4ec1-90dc-8b1ba27df9b3",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": -284,
@@ -550,7 +550,7 @@
             },
             {
                 "drawing_id": "4c990583-1a32-4608-b92f-5fcbae1ce282",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": -258,
@@ -559,7 +559,7 @@
             },
             {
                 "drawing_id": "e875a4a6-71d5-481c-a310-26016f39ef4d",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": -229,
@@ -568,7 +568,7 @@
             },
             {
                 "drawing_id": "6bd7b673-1de9-4c15-a9d9-80c17698bf04",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": -36,
@@ -577,7 +577,7 @@
             },
             {
                 "drawing_id": "eb3f7291-4494-466c-8d5a-8ab940e504c6",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -193,
@@ -586,7 +586,7 @@
             },
             {
                 "drawing_id": "06706dba-d69a-4522-bc10-785fce7f0c75",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -154,
@@ -595,7 +595,7 @@
             },
             {
                 "drawing_id": "5eed8e8f-f3d3-4652-8a3b-2f6abb2f137a",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": -167,
@@ -604,7 +604,7 @@
             },
             {
                 "drawing_id": "ee878ff8-5287-4f60-b518-1a62594e2a92",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": -27,
@@ -613,7 +613,7 @@
             },
             {
                 "drawing_id": "1489777c-59ee-402d-af04-697236c60157",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": 34,
@@ -622,7 +622,7 @@
             },
             {
                 "drawing_id": "4e9f5479-276d-4da7-b32d-f4f3565a6025",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": 33,
@@ -631,7 +631,7 @@
             },
             {
                 "drawing_id": "6f49e0c0-5ecd-4793-9df5-20e45cb604e2",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": 55,
@@ -640,7 +640,7 @@
             },
             {
                 "drawing_id": "8c6a3fed-35fc-499b-8c13-e28c82001c94",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": 67,
@@ -649,7 +649,7 @@
             },
             {
                 "drawing_id": "0100e1aa-a023-4606-a4a7-1e219efd1738",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": 197,
@@ -658,7 +658,7 @@
             },
             {
                 "drawing_id": "463e7d81-952d-41d0-86f8-a0760e92f0c0",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": 189,
@@ -667,7 +667,7 @@
             },
             {
                 "drawing_id": "54dfdbeb-8411-4f76-bb51-f27c362fd798",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": 240,
@@ -676,7 +676,7 @@
             },
             {
                 "drawing_id": "d6d53ae5-f8e3-4c47-8115-ad5c0183a903",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": 283,
@@ -685,7 +685,7 @@
             },
             {
                 "drawing_id": "5f21e8af-1804-4602-8754-40e0994c7472",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": 551,
@@ -694,7 +694,7 @@
             },
             {
                 "drawing_id": "8e904c27-6ba0-4090-ac36-b0412c68ad59",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": 563,
@@ -703,7 +703,7 @@
             },
             {
                 "drawing_id": "43a8433f-858e-49d3-8240-00e98b9fa256",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": 474,
@@ -712,7 +712,7 @@
             },
             {
                 "drawing_id": "1e0eb7ab-5b9f-4fd9-a146-11ceb8987fd5",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"38\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">eth0</text></svg>",
                 "x": 688,
@@ -721,7 +721,7 @@
             },
             {
                 "drawing_id": "09c7a2aa-1ee0-4e78-a39a-1b5705efb1c3",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": 568,
@@ -730,7 +730,7 @@
             },
             {
                 "drawing_id": "d6a89605-a099-4fee-acb6-220e10115d46",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
                 "x": 557,
@@ -739,7 +739,7 @@
             },
             {
                 "drawing_id": "d800792c-200f-44ed-a1c2-3e4517d85656",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": 485,
@@ -748,7 +748,7 @@
             },
             {
                 "drawing_id": "c469221d-1cfe-482f-be56-7390d05df9e9",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"38\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">eth0</text></svg>",
                 "x": 671,
@@ -757,7 +757,7 @@
             },
             {
                 "drawing_id": "a717243b-064c-4862-b67f-f1e295342038",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"38\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">eth0</text></svg>",
                 "x": 685,
@@ -766,7 +766,7 @@
             },
             {
                 "drawing_id": "4b2e76ea-adab-4511-b388-af486382b64c",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"38\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">eth0</text></svg>",
                 "x": 654,
@@ -775,7 +775,7 @@
             },
             {
                 "drawing_id": "1e33c961-feff-4762-ad49-6ba60380311a",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"38\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">eth0</text></svg>",
                 "x": -857,
@@ -784,7 +784,7 @@
             },
             {
                 "drawing_id": "9a3e7acc-8511-4bb5-af03-c23744c3a85c",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"38\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">eth0</text></svg>",
                 "x": -860,
@@ -793,7 +793,7 @@
             },
             {
                 "drawing_id": "06210507-a502-4ddb-96d5-fff2b8d61202",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"38\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">eth0</text></svg>",
                 "x": -849,
@@ -802,7 +802,7 @@
             },
             {
                 "drawing_id": "87b972eb-bcc3-47db-96ff-25e1ac0d1cac",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"38\"><text fill=\"#ff0000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"10.0\" font-weight=\"bold\">eth0</text></svg>",
                 "x": -837,
@@ -811,56 +811,182 @@
             },
             {
                 "drawing_id": "23d8ad99-f9df-4e53-966a-b25a781f01ed",
-                "locked": false,
+                "locked": true,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">0.0.0.0</text></svg>",
-                "x": -592,
-                "y": -57,
+                "x": -580,
+                "y": -61,
                 "z": 2
             },
             {
-                "drawing_id": "d8452a04-a3c5-4746-bff9-141ac032db2f",
-                "locked": false,
+                "drawing_id": "64f2674f-1614-4b91-9c23-0d6d54c6d8ac",
+                "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">2.2.2.2</text></svg>",
-                "x": 55,
-                "y": -243,
+                "svg": "<svg height=\"584\" width=\"687\"><rect fill=\"#0055ff\" fill-opacity=\"0.3137254901960784\" height=\"584\" stroke=\"#000000\" stroke-width=\"2\" width=\"687\" /></svg>",
+                "x": -1289,
+                "y": -623,
+                "z": -1
+            },
+            {
+                "drawing_id": "d16fc1d7-0c7f-448c-84ba-f9761fde7194",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"584\" width=\"687\"><rect fill=\"#ffff00\" fill-opacity=\"0.3137254901960784\" height=\"584\" stroke=\"#000000\" stroke-width=\"2\" width=\"687\" /></svg>",
+                "x": -1290,
+                "y": -19,
+                "z": -1
+            },
+            {
+                "drawing_id": "d9a91855-d7c6-4db4-93de-afe2a23f4be7",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">0.0.0.0</text></svg>",
+                "x": -325,
+                "y": 105,
                 "z": 2
             },
             {
-                "drawing_id": "691960fb-e632-4c10-bf58-3118d808db0a",
-                "locked": false,
+                "drawing_id": "6ecdd51c-41f3-4143-9af8-1707f5f13a67",
+                "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">1.1.1.1</text></svg>",
+                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">0.0.0.0</text></svg>",
+                "x": 69,
+                "y": 113,
+                "z": 2
+            },
+            {
+                "drawing_id": "833e03e0-4e4e-4535-847a-eb3d8ff204fc",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">0.0.0.0</text></svg>",
+                "x": 323,
+                "y": -68,
+                "z": 2
+            },
+            {
+                "drawing_id": "89396f9c-7213-4158-82c3-eb0027eb6cc7",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">0.0.0.0</text></svg>",
+                "x": 70,
+                "y": -225,
+                "z": 2
+            },
+            {
+                "drawing_id": "46a4f612-8d16-402e-8c04-dcba86ffe014",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">0.0.0.0</text></svg>",
                 "x": -307,
                 "y": -229,
                 "z": 2
             },
             {
-                "drawing_id": "206bf921-4e32-45f2-8e4e-a2e7401e08f9",
-                "locked": false,
+                "drawing_id": "2d5a1383-c44e-471d-91da-f60b03e539f4",
+                "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">3.3.3.3</text></svg>",
-                "x": -323,
-                "y": 102,
+                "svg": "<svg height=\"47\" width=\"106\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"24.0\">AS 500</text></svg>",
+                "x": -126,
+                "y": 247,
                 "z": 2
             },
             {
-                "drawing_id": "36f899c3-faf8-4f45-968c-e18e0eca98bc",
-                "locked": false,
+                "drawing_id": "7e7ec0bf-1c20-46a8-92ac-7cdeea37cf59",
+                "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">4.4.4.4</text></svg>",
-                "x": 62,
-                "y": 107,
+                "svg": "<svg height=\"47\" width=\"106\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"24.0\">AS 100</text></svg>",
+                "x": -782,
+                "y": -146,
                 "z": 2
             },
             {
-                "drawing_id": "09970f07-fb4d-43c0-8fd0-e923deefd90a",
-                "locked": false,
+                "drawing_id": "a4967c08-cecb-45e0-8bda-77ef17f040a6",
+                "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">5.5.5.5</text></svg>",
-                "x": 316,
-                "y": -67,
+                "svg": "<svg height=\"584\" width=\"687\"><rect fill=\"#ff0000\" fill-opacity=\"0.3137254901960784\" height=\"584\" stroke=\"#000000\" stroke-width=\"2\" width=\"687\" /></svg>",
+                "x": 441,
+                "y": -634,
+                "z": -1
+            },
+            {
+                "drawing_id": "e5d339e7-886c-4ebd-8a15-6ce0b0d4157b",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"584\" width=\"687\"><rect fill=\"#ff55ff\" fill-opacity=\"0.3137254901960784\" height=\"584\" stroke=\"#000000\" stroke-width=\"2\" width=\"687\" /></svg>",
+                "x": 437,
+                "y": -22,
+                "z": -1
+            },
+            {
+                "drawing_id": "23428d0d-0867-40be-9c5a-a681e23d1aff",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"47\" width=\"106\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"24.0\">AS 200</text></svg>",
+                "x": -763,
+                "y": 422,
+                "z": 2
+            },
+            {
+                "drawing_id": "3ea8cb72-1fc9-4f4e-b888-ca092cd83340",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"47\" width=\"106\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"24.0\">AS 300</text></svg>",
+                "x": 507,
+                "y": -147,
+                "z": 2
+            },
+            {
+                "drawing_id": "8411f69d-fc0b-4af0-a417-d75b9cb5556f",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"47\" width=\"106\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"24.0\">AS 400</text></svg>",
+                "x": 488,
+                "y": 429,
+                "z": 2
+            },
+            {
+                "drawing_id": "82806057-95b5-4498-9a6e-04b07cf19e06",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"47\" width=\"84\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"24.0\">OSPF</text></svg>",
+                "x": -130,
+                "y": -342,
+                "z": 2
+            },
+            {
+                "drawing_id": "6934ca2e-df35-4170-9314-2b97ebdb8d63",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"37\" width=\"152\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"18.0\">PE-CE (eBGP)</text></svg>",
+                "x": -532,
+                "y": -302,
+                "z": 2
+            },
+            {
+                "drawing_id": "222e3c36-aed7-4dae-98d4-2968d0126c11",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"37\" width=\"152\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"18.0\">PE-CE (eBGP)</text></svg>",
+                "x": 231,
+                "y": -294,
+                "z": 2
+            },
+            {
+                "drawing_id": "d70e38d8-f42e-4ceb-8893-c1eac08cbc3d",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"37\" width=\"152\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"18.0\">PE-CE (eBGP)</text></svg>",
+                "x": 249,
+                "y": 133,
+                "z": 2
+            },
+            {
+                "drawing_id": "7dd59eac-ad90-45b1-9a2e-890ae71d1bc5",
+                "locked": true,
+                "rotation": 0,
+                "svg": "<svg height=\"37\" width=\"152\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"18.0\">PE-CE (eBGP)</text></svg>",
+                "x": -565,
+                "y": 174,
                 "z": 2
             }
         ],
@@ -2034,7 +2160,7 @@
                     "x": 11,
                     "y": -35
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CE1",
                 "node_id": "61b60946-41da-41c9-98dc-2681e966b5e8",
                 "node_type": "dynamips",
@@ -2103,7 +2229,7 @@
                     "x": 11,
                     "y": -33
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PE1",
                 "node_id": "856f0560-c5e1-4056-90d0-4cf31a7f6928",
                 "node_type": "dynamips",
@@ -2172,7 +2298,7 @@
                     "x": 15,
                     "y": -33
                 },
-                "locked": false,
+                "locked": true,
                 "name": "P1",
                 "node_id": "fe91aa2b-2240-4fab-996c-6c4d10d818b2",
                 "node_type": "dynamips",
@@ -2241,7 +2367,7 @@
                     "x": 16,
                     "y": 51
                 },
-                "locked": false,
+                "locked": true,
                 "name": "P3",
                 "node_id": "202630d2-5cce-401b-be63-967b324d629e",
                 "node_type": "dynamips",
@@ -2310,7 +2436,7 @@
                     "x": 17,
                     "y": -33
                 },
-                "locked": false,
+                "locked": true,
                 "name": "P2",
                 "node_id": "d282f855-ee45-40bc-bc74-6b628f33d1f3",
                 "node_type": "dynamips",
@@ -2379,7 +2505,7 @@
                     "x": 26,
                     "y": 51
                 },
-                "locked": false,
+                "locked": true,
                 "name": "P4",
                 "node_id": "d81c3589-b86c-4233-bd18-24990d3bbcf8",
                 "node_type": "dynamips",
@@ -2448,7 +2574,7 @@
                     "x": 8,
                     "y": -33
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PE2",
                 "node_id": "cc5ca82f-4a87-46b0-bf0d-0a8a50c10e22",
                 "node_type": "dynamips",
@@ -2517,7 +2643,7 @@
                     "x": 7,
                     "y": -33
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CE3",
                 "node_id": "4da104f9-dfa8-4bc3-b8a2-f6448b59bba3",
                 "node_type": "dynamips",
@@ -2586,7 +2712,7 @@
                     "x": 5,
                     "y": -33
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CE2",
                 "node_id": "69ef9bd9-b0d9-4ff4-a9e2-4627d38f1b06",
                 "node_type": "dynamips",
@@ -2655,7 +2781,7 @@
                     "x": 10,
                     "y": -38
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CE4",
                 "node_id": "075e6a34-f9ae-4d83-bda0-15eaf438fa04",
                 "node_type": "dynamips",
@@ -2724,7 +2850,7 @@
                     "x": 10,
                     "y": -36
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CS31",
                 "node_id": "e558c4b0-fe3c-4272-a01b-3f8483fc9840",
                 "node_type": "ethernet_switch",
@@ -2804,7 +2930,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC1",
                 "node_id": "76523e9d-4386-44e5-b759-c0fe9813cbcc",
                 "node_type": "vpcs",
@@ -2833,7 +2959,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC2",
                 "node_id": "0ef3ea23-cda8-4351-bd25-1770befb7c66",
                 "node_type": "vpcs",
@@ -2862,7 +2988,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC3",
                 "node_id": "a48baffe-c465-4823-bc35-d9c74c1dde94",
                 "node_type": "vpcs",
@@ -2891,7 +3017,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC4",
                 "node_id": "fd5a58f1-3310-4123-8766-3e80f196efe2",
                 "node_type": "vpcs",
@@ -2920,7 +3046,7 @@
                     "x": 10,
                     "y": -36
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CS32",
                 "node_id": "1f626f51-dc13-4eb6-93c4-7705d5dab183",
                 "node_type": "ethernet_switch",
@@ -3000,7 +3126,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC7",
                 "node_id": "79088b8e-4905-4eec-b098-afbf1bb44121",
                 "node_type": "vpcs",
@@ -3029,7 +3155,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC5",
                 "node_id": "9709da65-14ff-4424-858e-8859d9e7c612",
                 "node_type": "vpcs",
@@ -3058,7 +3184,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC6",
                 "node_id": "99a52964-cd40-47c3-8659-2ac1ea5dcf76",
                 "node_type": "vpcs",
@@ -3087,7 +3213,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC8",
                 "node_id": "eb46a410-722b-4294-9d85-7adbeb7fd0c7",
                 "node_type": "vpcs",
@@ -3116,7 +3242,7 @@
                     "x": 9,
                     "y": -38
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CS41",
                 "node_id": "1834e325-7cc2-4b59-a8fe-ddeb5bd551d6",
                 "node_type": "ethernet_switch",
@@ -3196,7 +3322,7 @@
                     "x": 7,
                     "y": -33
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CS42",
                 "node_id": "81481247-8d40-4b21-8cff-a229a76549ba",
                 "node_type": "ethernet_switch",
@@ -3276,7 +3402,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC9",
                 "node_id": "0fdf560d-1d4d-42b5-aeab-5ca4ccc76ead",
                 "node_type": "vpcs",
@@ -3305,7 +3431,7 @@
                     "x": 22,
                     "y": -39
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CS11",
                 "node_id": "fd4babdc-0b0a-41f5-9f0c-72f2ad584ce5",
                 "node_type": "ethernet_switch",
@@ -3385,7 +3511,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC10",
                 "node_id": "1470868c-7066-4c65-a5d6-787b423178fe",
                 "node_type": "vpcs",
@@ -3414,7 +3540,7 @@
                     "x": 12,
                     "y": -32
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC11",
                 "node_id": "8d0c4031-916d-4afc-a901-542536ef4193",
                 "node_type": "vpcs",
@@ -3443,7 +3569,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC12",
                 "node_id": "c1ff0d32-3169-45a5-85c6-fd86accedede",
                 "node_type": "vpcs",
@@ -3472,7 +3598,7 @@
                     "x": 6,
                     "y": -39
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CS12",
                 "node_id": "8802e99c-f6c2-4d6c-95d9-14bc83bff7d1",
                 "node_type": "ethernet_switch",
@@ -3552,7 +3678,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC13",
                 "node_id": "ce8e6036-248d-4ba5-9e8c-168b59d386e2",
                 "node_type": "vpcs",
@@ -3581,7 +3707,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC16",
                 "node_id": "9108209e-a873-43b4-886b-624b95a9e98d",
                 "node_type": "vpcs",
@@ -3610,7 +3736,7 @@
                     "x": 14,
                     "y": -29
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC14",
                 "node_id": "623f2b9d-f168-43f2-8c83-69696a4d7b76",
                 "node_type": "vpcs",
@@ -3639,7 +3765,7 @@
                     "x": 16,
                     "y": -25
                 },
-                "locked": false,
+                "locked": true,
                 "name": "PC15",
                 "node_id": "00f601f4-4ec5-4edf-8b5b-814b81f2d260",
                 "node_type": "vpcs",
@@ -3668,7 +3794,7 @@
                     "x": 5,
                     "y": -39
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CS22",
                 "node_id": "458c1750-20ab-4440-a9d0-c7ad225146d9",
                 "node_type": "ethernet_switch",
@@ -3748,7 +3874,7 @@
                     "x": 13,
                     "y": -35
                 },
-                "locked": false,
+                "locked": true,
                 "name": "CS21",
                 "node_id": "88a0e16e-3b4e-4ada-9623-d698d02d3ca3",
                 "node_type": "ethernet_switch",
@@ -3818,5 +3944,5 @@
     "type": "topology",
     "variables": [],
     "version": "2.2.35.1",
-    "zoom": 102
+    "zoom": 61
 }
