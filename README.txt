@@ -72,11 +72,12 @@ show ip ospf interface brief
 
 	5. Ajouter BGP entre CE-PE
 
-Config BGP sur les routeurs
+Config BGP sur les routeurs CE
 ------------------------------
 configure terminal
-router bgp AS
+router bgp 100
 neighbor 192.168.31.1 remote-as 500
+neighbor 192.168.31.1 activate
 exit
 exit
 copy run start
@@ -85,6 +86,41 @@ copy run start
 conf t
 do sho ip bgp neighbors
 
+Config BGP sur les routeurs PE
+------------------------------
+configure terminal
+router bgp 500
+ip vrf vpn1
+rd 500:3
+route-target export 500:1
+route-target import 500:1
+exit
+router bgp 500
+ip vrf vpn2
+rd 500:4
+route-target export 500:2
+route-target import 500:2
+exit
+router bgp 500
+address-family ipv4 vrf vpn1
+neighbor 192.168.30.2 remote-as 300
+neighbor 192.168.30.2 activate
+exit
+router bgp 500
+address-family ipv4 vrf vpn2
+neighbor 192.168.31.2 remote-as 400
+neighbor 192.168.31.2 activate
+exit
+exit
+exit
+copy run start
+
+(Pour montrer voisin)
+conf t
+do sho ip bgp neighbors
+
+
+
 	6. Ajouter MPLS
 
 Config MPLS sur les routeurs (a faire sur toutes les interfaces du backbone)
@@ -92,11 +128,41 @@ Config MPLS sur les routeurs (a faire sur toutes les interfaces du backbone)
 configure terminal
 interface gigabitEthernet 1/0
 ip cef
+exit
+conf terminal
 interface gigabitEthernet 1/0
 ip route-cache cef
 mpls mtu 1500
 mpls ip
 mpls label protocol ldp
+exit
+exit
+configure terminal
+interface gigabitEthernet 2/0
+ip cef
+exit
+conf terminal
+interface gigabitEthernet 2/0
+ip route-cache cef
+mpls mtu 1500
+mpls ip
+mpls label protocol ldp
+exit
+exit
+configure terminal
+interface gigabitEthernet 3/0
+ip cef
+exit
+conf terminal
+interface gigabitEthernet 3/0
+ip route-cache cef
+mpls mtu 1500
+mpls ip
+mpls label protocol ldp
+exit
+exit
+copy run start
+
 
 (CEF = cisco express forwarding)
 
