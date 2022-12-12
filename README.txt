@@ -11,8 +11,8 @@
 - Config pour chaque router
 --------------------------------
 configure terminal
-interface gigabitEthernet 4/0
-ip address 192.168.11.1 255.255.255.0
+interface gigabitEthernet 1/0
+ip address 192.168.30.2 255.255.255.0
 no shutdown
 exit
 exit
@@ -103,17 +103,44 @@ route-target import 500:2
 exit
 router bgp 500
 address-family ipv4 vrf vpn1
-neighbor 192.168.30.2 remote-as 300
-neighbor 192.168.30.2 activate
+neighbor 192.168.10.1 send-community extended
 exit
 router bgp 500
 address-family ipv4 vrf vpn2
-neighbor 192.168.31.2 remote-as 400
-neighbor 192.168.31.2 activate
+neighbor 192.168.11.2 send-community extended
 exit
 exit
 exit
+conf t
+interface gigabitEthernet 3/0
+ip vrf forwarding vpn1
+ip address .... ...
 copy run start
+
+# C'est vpnv4 a la place de ipv4
+----------------------
+Configuring Multiprotocol BGP Connectivity on the PE Devices and Route Reflectors
+SUMMARY STEPS
+1.    enable
+
+2.    configure terminal
+
+3.    router bgp as-number
+
+4.    no bgp default ipv4-unicast
+
+5.    neighbor {ip-address | peer-group-name} remote-as as-number
+
+6.    neighbor {ip-address | peer-group-name} activate
+
+7.    address-family vpnv4 [unicast]
+
+8.    neighbor {ip-address | peer-group-name} send-community extended
+
+9.    neighbor {ip-address | peer-group-name} activate
+
+10.    end
+-------------------------
 
 (Pour montrer voisin)
 conf t
@@ -126,11 +153,11 @@ do sho ip bgp neighbors
 Config MPLS sur les routeurs (a faire sur toutes les interfaces du backbone)
 ------------------------------
 configure terminal
-interface gigabitEthernet 1/0
+interface gigabitEthernet 4/0
 ip cef
 exit
 conf terminal
-interface gigabitEthernet 1/0
+interface gigabitEthernet 4/0
 ip route-cache cef
 mpls mtu 1500
 mpls ip
@@ -138,11 +165,11 @@ mpls label protocol ldp
 exit
 exit
 configure terminal
-interface gigabitEthernet 2/0
+interface gigabitEthernet 3/0
 ip cef
 exit
 conf terminal
-interface gigabitEthernet 2/0
+interface gigabitEthernet 3/0
 ip route-cache cef
 mpls mtu 1500
 mpls ip

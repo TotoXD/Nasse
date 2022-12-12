@@ -903,7 +903,7 @@
                 "drawing_id": "a4967c08-cecb-45e0-8bda-77ef17f040a6",
                 "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"584\" width=\"687\"><rect fill=\"#ff0000\" fill-opacity=\"0.3137254901960784\" height=\"584\" stroke=\"#000000\" stroke-width=\"2\" width=\"687\" /></svg>",
+                "svg": "<svg height=\"584\" width=\"687\"><rect fill=\"#0055ff\" fill-opacity=\"0.3137254901960784\" height=\"584\" stroke=\"#000000\" stroke-width=\"2\" width=\"687\" /></svg>",
                 "x": 441,
                 "y": -634,
                 "z": -1
@@ -912,7 +912,7 @@
                 "drawing_id": "e5d339e7-886c-4ebd-8a15-6ce0b0d4157b",
                 "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"584\" width=\"687\"><rect fill=\"#ff55ff\" fill-opacity=\"0.3137254901960784\" height=\"584\" stroke=\"#000000\" stroke-width=\"2\" width=\"687\" /></svg>",
+                "svg": "<svg height=\"584\" width=\"687\"><rect fill=\"#ffff00\" fill-opacity=\"0.3137254901960784\" height=\"584\" stroke=\"#000000\" stroke-width=\"2\" width=\"687\" /></svg>",
                 "x": 437,
                 "y": -22,
                 "z": -1
@@ -3944,5 +3944,5 @@
     "type": "topology",
     "variables": [],
     "version": "2.2.35.1",
-    "zoom": 61
+    "zoom": 53
 }
