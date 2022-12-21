@@ -64,29 +64,29 @@
             },
             {
                 "drawing_id": "f771e060-abdf-4a7c-bb43-1f1d64978f70",
-                "locked": true,
+                "locked": false,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 3/0</text></svg>",
-                "x": -697,
-                "y": 243,
+                "x": -623,
+                "y": 171,
                 "z": 2
             },
             {
                 "drawing_id": "ac7549ff-c1ca-4f53-93b0-6e334fb993ac",
-                "locked": true,
+                "locked": false,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 1/0</text></svg>",
-                "x": -631,
-                "y": 186,
+                "x": -779,
+                "y": 208,
                 "z": 2
             },
             {
                 "drawing_id": "ae37f19c-068c-4962-8576-87ca9ea6caf6",
-                "locked": true,
+                "locked": false,
                 "rotation": 0,
                 "svg": "<svg height=\"27\" width=\"48\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"12.0\">G 2/0</text></svg>",
-                "x": -768,
-                "y": 208,
+                "x": -693,
+                "y": 241,
                 "z": 2
             },
             {

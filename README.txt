@@ -12,7 +12,7 @@
 --------------------------------
 configure terminal
 interface gigabitEthernet 1/0
-ip address 192.168.30.2 255.255.255.0
+ip address 192.168.31.2 255.255.255.0
 no shutdown
 exit
 exit
@@ -75,12 +75,20 @@ show ip ospf interface brief
 Config BGP sur les routeurs CE
 ------------------------------
 configure terminal
-router bgp 100
-neighbor 192.168.31.1 remote-as 500
-neighbor 192.168.31.1 activate
+router bgp 300
+neighbor 192.168.30.1 remote-as 500
+neighbor 192.168.30.1 activate
+address-family ipv4
+redistribute connected
+neighbor 192.168.30.1 activate
+neighbor 192.168.30.1 advertisement-interval 5
+no auto-summary
+no synchronization
+exit-address-family
 exit
 exit
 copy run start
+
 
 (Pour montrer voisin)
 conf t
@@ -102,13 +110,21 @@ route-target export 500:2
 route-target import 500:2
 exit
 router bgp 500
-address-family ipv4 vrf vpn1
-neighbor 192.168.10.1 send-community extended
+no bgp default ipv4-unicast
+neighbor 192.168.31.1 remote-as 500
+address-family vpnv4
+neighbor 192.168.30.2 activate
+neighbor 192.168.30.2 send-community extended
+neighbor 192.168.31.2 activate
+neighbor 192.168.31.2 send-community extended
 exit
 router bgp 500
 address-family ipv4 vrf vpn2
 neighbor 192.168.11.2 send-community extended
 exit
+router bgp 500
+address-family ipv4 vrf vpn1
+neighbor 192.168.10.2 send-community extended
 exit
 exit
 conf t
@@ -120,6 +136,7 @@ copy run start
 # C'est vpnv4 a la place de ipv4
 ----------------------
 Configuring Multiprotocol BGP Connectivity on the PE Devices and Route Reflectors
+
 SUMMARY STEPS
 1.    enable
 
@@ -153,11 +170,11 @@ do sho ip bgp neighbors
 Config MPLS sur les routeurs (a faire sur toutes les interfaces du backbone)
 ------------------------------
 configure terminal
-interface gigabitEthernet 4/0
+interface gigabitEthernet 1/0
 ip cef
 exit
 conf terminal
-interface gigabitEthernet 4/0
+interface gigabitEthernet 1/0
 ip route-cache cef
 mpls mtu 1500
 mpls ip
@@ -165,23 +182,11 @@ mpls label protocol ldp
 exit
 exit
 configure terminal
-interface gigabitEthernet 3/0
+interface gigabitEthernet 2/0
 ip cef
 exit
 conf terminal
-interface gigabitEthernet 3/0
-ip route-cache cef
-mpls mtu 1500
-mpls ip
-mpls label protocol ldp
-exit
-exit
-configure terminal
-interface gigabitEthernet 3/0
-ip cef
-exit
-conf terminal
-interface gigabitEthernet 3/0
+interface gigabitEthernet 2/0
 ip route-cache cef
 mpls mtu 1500
 mpls ip
