@@ -11,8 +11,8 @@
 - Config pour chaque router
 --------------------------------
 configure terminal
-interface gigabitEthernet 1/0
-ip address 192.168.31.2 255.255.255.0
+interface gigabitEthernet 2/0
+ip address 192.168.21.1 255.255.255.0
 no shutdown
 exit
 exit
@@ -56,10 +56,9 @@ Config ospf sur les routeurs
 ------------------------------
 configure terminal
 router ospf 1
-network 192.168.26.2 0.0.0.0 area 0
-network 192.168.31.1 0.0.0.0 area 0
-network 192.168.30.1 0.0.0.0 area 0
-network 192.168.27.2 0.0.0.0 area 0
+network 192.168.22.2 0.0.0.0 area 0
+network 192.168.27.1 0.0.0.0 area 0
+network 192.168.25.2 0.0.0.0 area 0
 exit
 exit
 copy run start
@@ -133,7 +132,6 @@ ip vrf forwarding vpn1
 ip address .... ...
 copy run start
 
-# C'est vpnv4 a la place de ipv4
 ----------------------
 Configuring Multiprotocol BGP Connectivity on the PE Devices and Route Reflectors
 
@@ -201,6 +199,18 @@ copy run start
 
 	7. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)
 	(=> C ce que je disais PL du coup, c'est bien des AS différents mais juste le mm client)
+
+- Pour faire des tests (pings)
+
+* Sur les CE
+ping
+ip
+address
+
+* Sur les PE
+ping vrf vpn1 ip address
+
+
 
 	8. Automatiser l'ajout de client dans le réseaux
 
