@@ -19,11 +19,26 @@ if password:
 tn.write("enable\n")
 tn.write("cisco\n")
 tn.write("conf t\n")
-tn.write("int loop 0\n")
-tn.write("ip address 1.1.1.1 255.255.255.255\n")
-tn.write("int loop 1\n")
-tn.write("ip address 2.2.2.2 255.255.255.255\n")
+tn.write("int gigabitEthernet 1/0\n")
+tn.write("ip address 1.1.1.1 255.255.255.255\n") #A configurer les addresses ip (surement argv)
+tn.write("no shutdown\n")
+tn.write("int gigabitEthernet 2/0\n")
+tn.write("ip address 2.2.2.2 255.255.255.255\n") #A configurer les addresses ip (surement argv)
+tn.write("no shutdown\n")
+tn.write("int gigabitEthernet 3/0\n")
+tn.write("ip address 3.3.3.3 255.255.255.255\n") #A configurer les addresses ip (surement argv)
+tn.write("no shutdown\n")
+
+#OSPF
+
 tn.write("router ospf 1\n")
-tn.write("network 0.0.0.0 255.255.255.255 area 0\n")
+tn.write("network 192.168.22.2 0.0.0.0 area 0\n")
+tn.write("network 192.168.27.1 0.0.0.0 area 0\n")
+tn.write("network 192.168.25.2 0.0.0.0 area 0\n")
+
+#BGP
+
+tn.write("router bgp 300\n")
+
 tn.write("end\n")
 tn.write("exit\n")
