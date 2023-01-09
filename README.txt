@@ -79,7 +79,7 @@ Config BGP sur les routeurs CE
 ------------------------------
 configure terminal
 router bgp 300
-neighbor 192.168.30.1 remote-as 500
+neighbor 192.168.10.1 remote-as 100
 neighbor 192.168.30.1 activate
 address-family ipv4
 redistribute connected
@@ -115,6 +115,8 @@ exit
 router bgp 500
 no bgp default ipv4-unicast
 neighbor 192.168.31.1 remote-as 500
+neighbor 192.168.10.1 remote-as 100
+neighbor 192.168.11.1 remote-as 200
 address-family vpnv4
 neighbor 192.168.30.2 activate
 neighbor 192.168.30.2 send-community extended
@@ -123,10 +125,12 @@ neighbor 192.168.31.2 send-community extended
 exit
 router bgp 500	
 address-family ipv4 vrf vpn2
+neighbor 192.168.11.2 activate
 neighbor 192.168.11.2 send-community extended
 exit
 router bgp 500
 address-family ipv4 vrf vpn1
+neighbor 192.168.10.2 activate
 neighbor 192.168.10.2 send-community extended
 exit
 exit
@@ -188,6 +192,9 @@ ping vrf vpn1 ip address
 
 	7. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)
 
+- Il faut add une route map/ access list pour pouvoir importer des
+vrf, c koi des tunnels?
+
 !--- Enables the VPN routing and forwarding (VRF) routing table.  
 !--- Route distinguisher creates routing and forwarding tables for a VRF. 
 !--- Route targets creates lists of import and export extended communities for the specified VRF.
@@ -223,8 +230,17 @@ MPLS Access lists enables filtering of MPLS packets based on MPLS label and send
 configured redirect interfaces.
 
 show mpls ldp neighbor (montre voisins)
-
+show ip bgp neighbors x.x.x.x advertised-routes (routes bgp)
+ 
 Problem either comes from bad forwarding des vrf, ou alors bad names of rd/rt, or wrongs imports/exports
+Pour advertise entre les 2 PE, peut etre faut faire sessions IBGP, ou alors redistribute connected ca suffit
+=> En fait c pcq on a fait disable ipv4 unicast pour faire vpnv4
+address-family vpnv4 vrf ... au lieu de ipv4?
+
+force ping from source ping address source interface
+
+=> Enlever ip forwarding vrf pour faire marcher bgp
+
 
 	8. Ajouter encryption sur les routes vpn
 	
@@ -232,13 +248,17 @@ Problem either comes from bad forwarding des vrf, ou alors bad names of rd/rt, o
 
 	10. Favoriser certaines routes, comme des Peers, pour payer moins
 
-	11. Pouvoir mettre des règles sur les nouveaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
+	11. Pouvoir mettre des règles sur les nou	veaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
 
 	12. Automatiser l'ajout de client dans le réseaux
 
 # II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
 
-
+- Scripts pour ajouter des clients
+- Différent s'ils sont des transporteurs, des pairs, des clients, (pour payer plus ou moins)
+=> Transporteurs utilisés en 'dernier recours',
+=> Clients peuvent nous demander des connexions vpn
+=> 
 
 
 
