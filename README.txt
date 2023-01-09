@@ -1,10 +1,14 @@
 # Nasse
 
-# I. Configurer MPLS à la main sur tout le réseau
+Doc:
+https://www.cisco.com/c/en/us/support/docs/multiprotocol-label-switching-mpls/mpls/13733-mpls-vpn-basic.html
+https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/mp_l3_vpns/configuration/15-s/mp-l3-vpns-15-s-book/mp-bgp-mpls-vpn.html
+
+# I. Configuration initiale du réseau:
 	
 	1. Ajouter des routers et des links
 
-	2. Ajouter des switchs avec des PC derriere chaque CE/CS (peut être plus tard)
+	2. Ajouter des switchs avec des PC derriere chaque CE/CS
 
 	3. Configurer une IP sur chacune des interfaces des routeurs
 
@@ -50,7 +54,7 @@ default interface gi 1/1
 copy run start
 
 
-	4. Configure OSPF sur les routeurs et ajouter les routes
+	4. Configurer OSPF sur les routeurs et ajouter les routes
 
 Config ospf sur les routeurs
 ------------------------------
@@ -98,13 +102,13 @@ Config BGP sur les routeurs PE
 configure terminal
 router bgp 500
 ip vrf vpn1
-rd 500:3
+rd 500:1
 route-target export 500:1
 route-target import 500:1
 exit
 router bgp 500
 ip vrf vpn2
-rd 500:4
+rd 500:2
 route-target export 500:2
 route-target import 500:2
 exit
@@ -117,7 +121,7 @@ neighbor 192.168.30.2 send-community extended
 neighbor 192.168.31.2 activate
 neighbor 192.168.31.2 send-community extended
 exit
-router bgp 500
+router bgp 500	
 address-family ipv4 vrf vpn2
 neighbor 192.168.11.2 send-community extended
 exit
@@ -131,36 +135,11 @@ interface gigabitEthernet 3/0
 ip vrf forwarding vpn1
 ip address .... ...
 copy run start
-
 ----------------------
-Configuring Multiprotocol BGP Connectivity on the PE Devices and Route Reflectors
-
-SUMMARY STEPS
-1.    enable
-
-2.    configure terminal
-
-3.    router bgp as-number
-
-4.    no bgp default ipv4-unicast
-
-5.    neighbor {ip-address | peer-group-name} remote-as as-number
-
-6.    neighbor {ip-address | peer-group-name} activate
-
-7.    address-family vpnv4 [unicast]
-
-8.    neighbor {ip-address | peer-group-name} send-community extended
-
-9.    neighbor {ip-address | peer-group-name} activate
-
-10.    end
--------------------------
-
 (Pour montrer voisin)
 conf t
 do sho ip bgp neighbors
-
+----------------------
 
 
 	6. Ajouter MPLS
@@ -192,13 +171,9 @@ mpls label protocol ldp
 exit
 exit
 copy run start
-
+------------------------------
 
 (CEF = cisco express forwarding)
-
-
-	7. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)
-	(=> C ce que je disais PL du coup, c'est bien des AS différents mais juste le mm client)
 
 - Pour faire des tests (pings)
 
@@ -211,13 +186,55 @@ address
 ping vrf vpn1 ip address
 
 
+	7. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)
 
-	8. Automatiser l'ajout de client dans le réseaux
+!--- Enables the VPN routing and forwarding (VRF) routing table.  
+!--- Route distinguisher creates routing and forwarding tables for a VRF. 
+!--- Route targets creates lists of import and export extended communities for the specified VRF.
 
-	9. Favoriser certaines routes, comme des Peers, pour payer moins
+Pour vérifs:
 
-	10. Pouvoir mettre des règles sur les nouveaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
+PE to CE Verification Commands
+------------------------------
+show ip vrf  — Verifies that the correct VRF exists.
+show ip vrf interfaces  — Verifies the activated interfaces.
+show ip route vrf <VRF name>  —Verifies the routing information on the PE routers.
+traceroute vrf  <VRF name> <IP address>  — Verifies the routing information on the PE routers.
+show ip cef vrf <VRF name> <IP address> detail  — Verifies the routing information on the PE routers.
+------------------------------
 
+MPLS LDP Verification Commands
+------------------------------
+show mpls interfaces
+show mpls forwarding-table
+show mpls ldp bindings
+show mpls ldp neighbor
+
+PE to PE/RR Verification Commands
+------------------------------
+show bgp vpnv4 unicast all summary
+show bgp vpnv4 unicast all neighbor <neighbor IP address> advertised-routes  - Verifies VPNv4 prefixes sent
+show bgp vpnv4 unicast all neighbor <neighbor IP address> routes  - Verifies VPNv4 prefixes received
+
+Pour rendre plus logique, faudrait-il que les CE1/3 et 2/4 aient les mêmes addresses?
+
+Access lists:
+MPLS Access lists enables filtering of MPLS packets based on MPLS label and sending filtered packets to
+configured redirect interfaces.
+
+show mpls ldp neighbor (montre voisins)
+
+Problem either comes from bad forwarding des vrf, ou alors bad names of rd/rt, or wrongs imports/exports
+
+	8. Ajouter encryption sur les routes vpn
+	
+	9. Ajouter VOip, filtrage par access-lists, Qos BGP...
+
+	10. Favoriser certaines routes, comme des Peers, pour payer moins
+
+	11. Pouvoir mettre des règles sur les nouveaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
+
+	12. Automatiser l'ajout de client dans le réseaux
 
 # II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
 
