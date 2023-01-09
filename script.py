@@ -5,7 +5,8 @@ import sys
 import telnetlib
 
 HOST = "192.168.122.71"
-user = raw_input("Enter your telnet username: ")
+HOST = input("Enter your address's interface: ")
+user = input("Enter your telnet username: ")
 password = getpass.getpass()
 
 tn = telnetlib.Telnet(HOST)
@@ -39,6 +40,18 @@ tn.write("network 192.168.25.2 0.0.0.0 area 0\n")
 #BGP
 
 tn.write("router bgp 300\n")
+tn.write("neighbor 192.168.30.1 remote-as 500\n")
+tn.write("neighbor 192.168.30.1 activate\n")
+tn.write("address-family ipv4\n")
+tn.write("redistribute connected\n")
+tn.write("neighbor 192.168.30.1 activate\n")
+tn.write("neighbor 192.168.30.1 advertisement-interval 5\n")
+tn.write("no auto-summary\n")
+tn.write("no synchronization\n")
+tn.write("exit-address-family\n")
+
+
+
 
 tn.write("end\n")
 tn.write("exit\n")
