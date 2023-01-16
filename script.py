@@ -50,8 +50,5 @@ tn.write("no auto-summary\n")
 tn.write("no synchronization\n")
 tn.write("exit-address-family\n")
 
-
-
-
 tn.write("end\n")
 tn.write("exit\n")

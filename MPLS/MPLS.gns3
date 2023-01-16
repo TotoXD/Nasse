@@ -813,7 +813,7 @@
                 "drawing_id": "23d8ad99-f9df-4e53-966a-b25a781f01ed",
                 "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">0.0.0.0</text></svg>",
+                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">1.1.1.1</text></svg>",
                 "x": -580,
                 "y": -61,
                 "z": 2
@@ -858,8 +858,8 @@
                 "drawing_id": "833e03e0-4e4e-4535-847a-eb3d8ff204fc",
                 "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">0.0.0.0</text></svg>",
-                "x": 323,
+                "svg": "<svg height=\"33\" width=\"81\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">2.2.2.2</text></svg>",
+                "x": 320,
                 "y": -68,
                 "z": 2
             },

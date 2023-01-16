@@ -63,6 +63,7 @@ router ospf 1
 network 192.168.22.2 0.0.0.0 area 0
 network 192.168.27.1 0.0.0.0 area 0
 network 192.168.25.2 0.0.0.0 area 0
+network 1.1.1.1 0.0.0.0 area 0
 exit
 exit
 copy run start
@@ -100,13 +101,11 @@ do sho ip bgp neighbors
 Config BGP sur les routeurs PE
 ------------------------------
 configure terminal
-router bgp 500
 ip vrf vpn1
 rd 500:1
 route-target export 500:1
 route-target import 500:1
 exit
-router bgp 500
 ip vrf vpn2
 rd 500:2
 route-target export 500:2
@@ -118,10 +117,8 @@ neighbor 192.168.31.1 remote-as 500
 neighbor 192.168.10.1 remote-as 100
 neighbor 192.168.11.1 remote-as 200
 address-family vpnv4
-neighbor 192.168.30.2 activate
-neighbor 192.168.30.2 send-community extended
-neighbor 192.168.31.2 activate
-neighbor 192.168.31.2 send-community extended
+neighbor 2.2.2.2 activate
+neighbor 2.2.2.2 send-community extended
 exit
 router bgp 500	
 address-family ipv4 vrf vpn2
@@ -137,7 +134,7 @@ exit
 conf t
 interface gigabitEthernet 3/0
 ip vrf forwarding vpn1
-ip address .... ...
+ip address 192.168.10.2 255.255.255.0
 copy run start
 ----------------------
 (Pour montrer voisin)
@@ -192,9 +189,6 @@ ping vrf vpn1 ip address
 
 	7. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)
 
-- Il faut add une route map/ access list pour pouvoir importer des
-vrf, c koi des tunnels?
-
 !--- Enables the VPN routing and forwarding (VRF) routing table.  
 !--- Route distinguisher creates routing and forwarding tables for a VRF. 
 !--- Route targets creates lists of import and export extended communities for the specified VRF.
@@ -210,20 +204,8 @@ traceroute vrf  <VRF name> <IP address>  — Verifies the routing information on
 show ip cef vrf <VRF name> <IP address> detail  — Verifies the routing information on the PE routers.
 ------------------------------
 
-MPLS LDP Verification Commands
-------------------------------
-show mpls interfaces
-show mpls forwarding-table
-show mpls ldp bindings
-show mpls ldp neighbor
 
-PE to PE/RR Verification Commands
-------------------------------
-show bgp vpnv4 unicast all summary
-show bgp vpnv4 unicast all neighbor <neighbor IP address> advertised-routes  - Verifies VPNv4 prefixes sent
-show bgp vpnv4 unicast all neighbor <neighbor IP address> routes  - Verifies VPNv4 prefixes received
-
-Pour rendre plus logique, faudrait-il que les CE1/3 et 2/4 aient les mêmes addresses?
+Pour rendre plus logique, faudrait que CE3/4 aient les memes addresses
 
 Access lists:
 MPLS Access lists enables filtering of MPLS packets based on MPLS label and sending filtered packets to
@@ -231,16 +213,46 @@ configured redirect interfaces.
 
 show mpls ldp neighbor (montre voisins)
 show ip bgp neighbors x.x.x.x advertised-routes (routes bgp)
- 
-Problem either comes from bad forwarding des vrf, ou alors bad names of rd/rt, or wrongs imports/exports
-Pour advertise entre les 2 PE, peut etre faut faire sessions IBGP, ou alors redistribute connected ca suffit
-=> En fait c pcq on a fait disable ipv4 unicast pour faire vpnv4
-address-family vpnv4 vrf ... au lieu de ipv4?
 
-force ping from source ping address source interface
+force ping from source: ping address source interface
 
 => Enlever ip forwarding vrf pour faire marcher bgp
 
+Les routeurs ont des tables de routage globales, ainsi que des VRF (virtual routing) qui permettent
+d'être appliqué à certaines destinations pour faire une action particulière
+
+J'ai besoin de dire a CE1 que la route pour aller a CE3 doit toujours passer par PE1, ensuite PE1
+se charge de router?
+
+Commandes pour CE
+------------------------------
+conf t
+ip route 192.168.31.0 255.255.255.0 192.168.11.1
+exit
+------------------------------
+
+Commandes pour PE
+------------------------------
+conf t
+interface gigabitEthernet 1/0
+ip vrf forwarding vpn1
+ip address 192.168.10.2 255.255.255.0
+exit
+interface gigabitEthernet 3/0
+ip vrf forwarding vpn2
+ip address 192.168.10.1 255.255.255.0
+exit
+ip route vrf vpn1 192.168.30.0 255.255.255.0 192.168.21.1
+ip route vrf vpn1 192.168.30.0 255.255.255.0 2.2.2.2
+------------------------------
+RD = distinguish routes that belong to different vpn's
+RT = control distribution of routes
+AS:COMMUNITY
+
+pour check routes
+show ip bgp vpnv4 vrf vpn1
+show ip route vrf vpn1
+now on PE2 i do a vpn route to go to 30.2 through 30.1
 
 	8. Ajouter encryption sur les routes vpn
 	
