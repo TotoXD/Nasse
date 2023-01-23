@@ -3,6 +3,7 @@
 Doc:
 https://www.cisco.com/c/en/us/support/docs/multiprotocol-label-switching-mpls/mpls/13733-mpls-vpn-basic.html
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/mp_l3_vpns/configuration/15-s/mp-l3-vpns-15-s-book/mp-bgp-mpls-vpn.html
+https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/117567-technote-ibgp-00.html
 
 # I. Configuration initiale du réseau:
 	
@@ -79,15 +80,12 @@ show ip ospf interface brief
 Config BGP sur les routeurs CE
 ------------------------------
 configure terminal
-router bgp 300
-neighbor 192.168.10.1 remote-as 100
-neighbor 192.168.30.1 activate
+router bgp 100
+bgp log-neighbor-changes
+neighbor 192.168.10.2 remote-as 500
 address-family ipv4
 redistribute connected
-neighbor 192.168.30.1 activate
-neighbor 192.168.30.1 advertisement-interval 5
-no auto-summary
-no synchronization
+neighbor 192.168.10.2 activate
 exit-address-family
 exit
 exit
@@ -127,8 +125,9 @@ neighbor 192.168.11.2 send-community extended
 exit
 router bgp 500
 address-family ipv4 vrf vpn1
-neighbor 192.168.10.2 activate
-neighbor 192.168.10.2 send-community extended
+neighbor 2.2.2.2 remote-as 500
+neighbor 2.2.2.2 activate
+neighbor 2.2.2.2 send-community extended
 exit
 exit
 conf t
@@ -148,11 +147,11 @@ do sho ip bgp neighbors
 Config MPLS sur les routeurs (a faire sur toutes les interfaces du backbone)
 ------------------------------
 configure terminal
-interface gigabitEthernet 1/0
+interface Loopback 1
 ip cef
 exit
 conf terminal
-interface gigabitEthernet 1/0
+interface Loopback 1
 ip route-cache cef
 mpls mtu 1500
 mpls ip
@@ -204,7 +203,6 @@ traceroute vrf  <VRF name> <IP address>  — Verifies the routing information on
 show ip cef vrf <VRF name> <IP address> detail  — Verifies the routing information on the PE routers.
 ------------------------------
 
-
 Pour rendre plus logique, faudrait que CE3/4 aient les memes addresses
 
 Access lists:
@@ -214,15 +212,8 @@ configured redirect interfaces.
 show mpls ldp neighbor (montre voisins)
 show ip bgp neighbors x.x.x.x advertised-routes (routes bgp)
 
-force ping from source: ping address source interface
-
-=> Enlever ip forwarding vrf pour faire marcher bgp
-
 Les routeurs ont des tables de routage globales, ainsi que des VRF (virtual routing) qui permettent
 d'être appliqué à certaines destinations pour faire une action particulière
-
-J'ai besoin de dire a CE1 que la route pour aller a CE3 doit toujours passer par PE1, ensuite PE1
-se charge de router?
 
 Commandes pour CE
 ------------------------------
@@ -242,8 +233,6 @@ interface gigabitEthernet 3/0
 ip vrf forwarding vpn2
 ip address 192.168.10.1 255.255.255.0
 exit
-ip route vrf vpn1 192.168.30.0 255.255.255.0 192.168.21.1
-ip route vrf vpn1 192.168.30.0 255.255.255.0 2.2.2.2
 ------------------------------
 RD = distinguish routes that belong to different vpn's
 RT = control distribution of routes
@@ -255,7 +244,40 @@ show ip route vrf vpn1
 now on PE2 i do a vpn route to go to 30.2 through 30.1
 
 	8. Ajouter encryption sur les routes vpn
-	
+
+Commandes sur router
+------------------------------
+conf t
+crypto isakmp policy 10
+encryption aes
+hash sha
+authentication pre-share
+group 5
+exit
+crypto isakmp key vpnuser address 192.168.10.2
+crypto ipsec transform-set myset esp-aes esp-sha-hmac
+exit
+access-list 100 permit ip 192.168.30.0 0.0.0.255 192.168.10.0 0.0.0.255
+crypto map mymap 10 ipsec-isakmp
+set peer 192.168.10.2
+set transform-set myset
+match address 100
+exit
+interface GigabitEthernet 1/0
+crypto map mymap
+exit
+exit
+copy run start
+------------------------------
+
+Troubleshooting
+------------------------------
+show crypto ipsec sa
+show crypto isakmp sa
+show crypto map
+show crypto session remote 192.168.11.2 detail
+------------------------------
+
 	9. Ajouter VOip, filtrage par access-lists, Qos BGP...
 
 	10. Favoriser certaines routes, comme des Peers, pour payer moins
