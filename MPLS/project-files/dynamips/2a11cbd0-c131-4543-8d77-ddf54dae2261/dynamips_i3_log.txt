@@ -1,0 +1,57 @@
+Jan 25 23:28:26.809 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Jan 25 23:28:26.810 HYPERVISOR: Started on IP = localhost, TCP port = 52163.
+Jan 25 23:28:27.309 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 25 23:28:27.310 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasnas\Nasse\MPLS\project-files\dynamips 
+Jan 25 23:28:27.310 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasnas\Nasse\MPLS\project-files\dynamips
+Jan 25 23:28:27.310 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasnas\Nasse\MPLS\project-files\dynamips\fe91aa2b-2240-4fab-996c-6c4d10d818b2 
+Jan 25 23:28:27.310 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasnas\Nasse\MPLS\project-files\dynamips\fe91aa2b-2240-4fab-996c-6c4d10d818b2
+Jan 25 23:28:27.311 HYPERVISOR: exec_cmd: vm create P1 9 c7200 
+Jan 25 23:28:27.313 VM: VM P1 created.
+Jan 25 23:28:27.313 HYPERVISOR: exec_cmd: vm set_con_tcp_port P1 5012 
+Jan 25 23:28:27.313 HYPERVISOR: exec_cmd: c7200 get_mac_addr P1 
+Jan 25 23:28:27.313 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:28:27.314 HYPERVISOR: exec_cmd: vm slot_add_binding P1 0 0 C7200-IO-FE 
+Jan 25 23:28:27.314 HYPERVISOR: exec_cmd: vm set_disk0 P1 0 
+Jan 25 23:28:27.314 HYPERVISOR: exec_cmd: vm set_exec_area P1 64 
+Jan 25 23:28:27.315 HYPERVISOR: exec_cmd: vm set_ios P1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Jan 25 23:28:27.316 HYPERVISOR: exec_cmd: c7200 set_mac_addr P1 ca09.580c.0000 
+Jan 25 23:28:27.316 HYPERVISOR: exec_cmd: vm set_nvram P1 512 
+Jan 25 23:28:27.317 HYPERVISOR: exec_cmd: vm set_ram P1 512 
+Jan 25 23:28:27.317 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:28:27.317 HYPERVISOR: exec_cmd: vm slot_add_binding P1 1 0 PA-GE 
+Jan 25 23:28:27.317 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:28:27.318 HYPERVISOR: exec_cmd: vm slot_add_binding P1 2 0 PA-GE 
+Jan 25 23:28:27.318 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:28:27.318 HYPERVISOR: exec_cmd: vm slot_add_binding P1 3 0 PA-GE 
+Jan 25 23:28:27.318 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:28:27.319 HYPERVISOR: exec_cmd: vm slot_add_binding P1 4 0 PA-GE 
+Jan 25 23:28:41.413 HYPERVISOR: exec_cmd: nio create_udp udp-6fc52552-7a18-4c8c-8595-ab801a525b94 10010 127.0.0.1 10011 
+Jan 25 23:28:41.674 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P1 1 0 udp-6fc52552-7a18-4c8c-8595-ab801a525b94 
+Jan 25 23:28:41.675 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:28:44.009 HYPERVISOR: exec_cmd: nio create_udp udp-e0e1aa0b-3951-4321-ad4e-745cd51f3ced 10050 127.0.0.1 10051 
+Jan 25 23:28:44.011 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P1 2 0 udp-e0e1aa0b-3951-4321-ad4e-745cd51f3ced 
+Jan 25 23:28:44.011 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:28:44.184 HYPERVISOR: exec_cmd: nio create_udp udp-0dde1698-b965-4c86-83ca-9e57d6c0f933 10062 127.0.0.1 10063 
+Jan 25 23:28:44.187 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P1 3 0 udp-0dde1698-b965-4c86-83ca-9e57d6c0f933 
+Jan 25 23:28:44.187 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:28:47.267 HYPERVISOR: exec_cmd: nio create_udp udp-db3e85b8-e466-42eb-acde-c39e95e1b4e4 10146 127.0.0.1 10147 
+Jan 25 23:28:47.269 HYPERVISOR: exec_cmd: vm slot_add_nio_binding P1 4 0 udp-db3e85b8-e466-42eb-acde-c39e95e1b4e4 
+Jan 25 23:28:47.270 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:33:20.925 HYPERVISOR: exec_cmd: vm set_ghost_status P1 2 
+Jan 25 23:33:20.927 HYPERVISOR: exec_cmd: vm set_ghost_file P1 C:\Users\thoma\Desktop\TC4\NAS\Nasnas\Nasse\MPLS\project-files\dynamips\c7200-adventerprisek9-mz.123-13b.image-512.ghost 
+Jan 25 23:33:20.927 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 25 23:33:20.929 HYPERVISOR: exec_cmd: vm set_config P1 configs\i9_startup-config.cfg 
+Jan 25 23:33:20.929 HYPERVISOR: exec_cmd: vm start P1 
+Jan 25 23:33:51.277 HYPERVISOR: exec_cmd: vm extract_config P1 
+Jan 25 23:49:51.637 HYPERVISOR: exec_cmd: vm extract_config P1 
+Jan 26 00:19:26.571 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 26 00:19:26.573 HYPERVISOR: exec_cmd: vm stop P1 
+Jan 26 00:19:26.766 VM: VM P1 shutdown.
+Jan 26 00:19:26.769 HYPERVISOR: exec_cmd: vm extract_config P1 
+Jan 26 00:19:28.411 HYPERVISOR: exec_cmd: vm get_status P1 
+Jan 26 00:19:28.413 HYPERVISOR: exec_cmd: vm extract_config P1 
+Jan 26 00:19:28.415 HYPERVISOR: exec_cmd: vm delete P1 
+Jan 26 00:19:28.415 VM: VM P1 destroyed.
+Jan 26 00:19:28.417 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 26 00:19:28.438 HYPERVISOR: Stopped.
+Jan 26 00:19:28.438 GENERAL: reset done.

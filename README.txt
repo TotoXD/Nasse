@@ -16,8 +16,8 @@ https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/117567
 - Config pour chaque router
 --------------------------------
 configure terminal
-interface gigabitEthernet 2/0
-ip address 192.168.21.1 255.255.255.0
+interface gigabitEthernet 4/0
+ip address 192.168.40.1 255.255.255.0
 no shutdown
 exit
 exit
@@ -25,15 +25,15 @@ copy run start
 -------------------------------- (Exemple pour plusieurs interfaces à la fois)
 configure terminal
 interface gigabitEthernet 1/0
-ip address 192.168.22.2 255.255.255.0
+ip address 192.168.40.2 255.255.255.0
 no shutdown
 exit
 interface gigabitEthernet 2/0
-ip address 192.168.27.1 255.255.255.0
+ip address 192.168.41.2 255.255.255.0
 no shutdown
 exit
 interface gigabitEthernet 3/0
-ip address 192.168.25.2 255.255.255.0
+ip address 192.168.48.2 255.255.255.0
 no shutdown
 exit
 exit
@@ -61,10 +61,8 @@ Config ospf sur les routeurs
 ------------------------------
 configure terminal
 router ospf 1
-network 192.168.22.2 0.0.0.0 area 0
-network 192.168.27.1 0.0.0.0 area 0
-network 192.168.25.2 0.0.0.0 area 0
-network 1.1.1.1 0.0.0.0 area 0
+network 192.168.41.1 0.0.0.0 area 0
+network 192.168.42.2 0.0.0.0 area 0
 exit
 exit
 copy run start
@@ -147,19 +145,25 @@ do sho ip bgp neighbors
 Config MPLS sur les routeurs (a faire sur toutes les interfaces du backbone)
 ------------------------------
 configure terminal
-interface Loopback 1
+interface gigabitEthernet 3/0
+ip address 192.168.46.1 255.255.255.0
+no shutdown
+exit
+interface gigabitEthernet 1/0
+ip address 192.168.41.1 255.255.255.0
+no shutdown
 ip cef
 exit
 conf terminal
-interface Loopback 1
+interface gigabitEthernet 1/0
 ip route-cache cef
 mpls mtu 1500
 mpls ip
 mpls label protocol ldp
 exit
-exit
-configure terminal
 interface gigabitEthernet 2/0
+ip address 192.168.42.1 255.255.255.0
+no shutdown
 ip cef
 exit
 conf terminal
@@ -184,7 +188,6 @@ address
 
 * Sur les PE
 ping vrf vpn1 ip address
-
 
 	7. Ajouter des routes MPLS-VPN entre différents AS du même client (ex: CE1 et CE4)
 
@@ -280,20 +283,58 @@ show crypto session remote 192.168.11.2 detail
 
 	9. Ajouter VOip, filtrage par access-lists, Qos BGP...
 
-	10. Favoriser certaines routes, comme des Peers, pour payer moins
+Il faut se rappeler que le but du projet est de simuler que nous sommes un internet provider,
+on veut donner un service simple à nos clients et payer le moins possible, et jamais avoir de panne/problèmes...
 
-	11. Pouvoir mettre des règles sur les nou	veaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
+QoS:
 
-	12. Automatiser l'ajout de client dans le réseaux
+Le but de MPLS est d'une part de pouvoir faire des labels pour forward les paquets
+sans utiliser des adresses et gagner en efficacité, mais ce n'est pas son plus grand atout.
+
+Le plus grand intérêt de MPLS est de pouvoir faire de la Quality of Service, notamment en
+implémentantant du PBR (Policy Based Routing) ainsi que du TE (Traffic Engineering).
+Cela permet non seulement de préférer certaines routes (providers plutot que peers) ou de rediriger
+le traffic comme bon nous semble: pour payer moins, pour éviter de l'overload, pour résister à la panne, etc.
+
+On peut notamment faire ça en ajoutant des route-map (partager certaines routes à certaines personnes), des
+access-lists (refuser/accepter du traffic), mettre un "poids" sur des routeurs pour passer par eux/les éviter,
+ajouter du RSVP (pour allouer des ressources sur certains liens), faire du segment-routing (allouer des SID pour
+rediriger le traffic vers une certaine partie du réseau)
+
+On fait aussi du class based marking, en priorisant le traffic VoIP qui ne peut pas attendre d'être delivered
+au dessus du traffic normal sur le réseau.
+
+Dans la config, on va simuler : (bien configuré)
+	- L'implémentation de clients qui ont besoin de QoS
+	- Des peers en rab
+	- Des transporteurs en rab
+
+	10. Pouvoir mettre des règles sur les nouveaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
+
+On peut avoir différents types de routeurs à rajouter et configurer quand on est un provider:
+
+- Un nouveau routeur Provider (P)
+- Un nouveau routeur Provder Edge (PE)
+- Un nouveau routeur Customer (CE)
+- Un transporteur (PT)
+
+Différents types de situations:
+- Un client veut rajouter deux nouveaux sites à notre réseaux sur un site qui n'existe pas chez nous
+- Un client veut rajouter des sites en VPN sur des VRF déjà existantes
+- Un client déjà existant veut rajouter un site à une de ces VRF sur un nouveau site PE
+- Un peer se rajoute à notre réseau
+- On a un nouveau PE ou un nouveau P qui s'ajoute
+- Un client peut vouloir du VPN ou non
+- Un transporteur (qu'on voit pas trop utiliser)
+...
+
+Il faut pouvoir s'adapter à toute type de situation, ajouter des routeurs, les configurer,
+mais surtout appliquer de la PBR et du TE pour gagner en efficacité, en argent, etc.
+
+
+12. Automatiser l'ajout de client dans le réseaux
 
 # II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
-
-- Scripts pour ajouter des clients
-- Différent s'ils sont des transporteurs, des pairs, des clients, (pour payer plus ou moins)
-=> Transporteurs utilisés en 'dernier recours',
-=> Clients peuvent nous demander des connexions vpn
-=> 
-
 
 
 

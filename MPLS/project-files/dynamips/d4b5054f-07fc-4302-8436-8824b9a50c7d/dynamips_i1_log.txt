@@ -1,0 +1,43 @@
+Jan 25 23:28:25.990 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Jan 25 23:28:25.991 HYPERVISOR: Started on IP = localhost, TCP port = 52151.
+Jan 25 23:28:26.177 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 25 23:28:26.178 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasnas\Nasse\MPLS\project-files\dynamips 
+Jan 25 23:28:26.184 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasnas\Nasse\MPLS\project-files\dynamips
+Jan 25 23:28:26.185 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\NAS\Nasnas\Nasse\MPLS\project-files\dynamips\61b60946-41da-41c9-98dc-2681e966b5e8 
+Jan 25 23:28:26.185 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\NAS\Nasnas\Nasse\MPLS\project-files\dynamips\61b60946-41da-41c9-98dc-2681e966b5e8
+Jan 25 23:28:26.186 HYPERVISOR: exec_cmd: vm create CE1 6 c7200 
+Jan 25 23:28:26.188 VM: VM CE1 created.
+Jan 25 23:28:26.189 HYPERVISOR: exec_cmd: vm set_con_tcp_port CE1 5005 
+Jan 25 23:28:26.189 HYPERVISOR: exec_cmd: c7200 get_mac_addr CE1 
+Jan 25 23:28:26.189 HYPERVISOR: exec_cmd: vm get_status CE1 
+Jan 25 23:28:26.190 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 0 0 C7200-IO-FE 
+Jan 25 23:28:26.190 HYPERVISOR: exec_cmd: vm set_disk0 CE1 0 
+Jan 25 23:28:26.191 HYPERVISOR: exec_cmd: vm set_exec_area CE1 64 
+Jan 25 23:28:26.192 HYPERVISOR: exec_cmd: vm set_ios CE1 C:/Users/thoma/GNS3/images/IOS/c7200-adventerprisek9-mz.123-13b.image 
+Jan 25 23:28:26.193 HYPERVISOR: exec_cmd: c7200 set_mac_addr CE1 ca06.5e84.0000 
+Jan 25 23:28:26.193 HYPERVISOR: exec_cmd: vm set_nvram CE1 512 
+Jan 25 23:28:26.193 HYPERVISOR: exec_cmd: vm set_ram CE1 512 
+Jan 25 23:28:26.194 HYPERVISOR: exec_cmd: vm get_status CE1 
+Jan 25 23:28:26.194 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 1 0 PA-GE 
+Jan 25 23:28:26.195 HYPERVISOR: exec_cmd: vm get_status CE1 
+Jan 25 23:28:26.195 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 2 0 PA-GE 
+Jan 25 23:28:26.195 HYPERVISOR: exec_cmd: vm get_status CE1 
+Jan 25 23:28:26.196 HYPERVISOR: exec_cmd: vm slot_add_binding CE1 3 0 PA-GE 
+Jan 25 23:28:40.824 HYPERVISOR: exec_cmd: nio create_udp udp-6420a82e-c135-4473-b868-96fd1329a1ef 10002 127.0.0.1 10003 
+Jan 25 23:28:41.089 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE1 3 0 udp-6420a82e-c135-4473-b868-96fd1329a1ef 
+Jan 25 23:28:41.089 HYPERVISOR: exec_cmd: vm get_status CE1 
+Jan 25 23:28:46.286 HYPERVISOR: exec_cmd: nio create_udp udp-c28f08bd-47e8-46b8-bb6a-fd7f43605a90 10122 127.0.0.1 10123 
+Jan 25 23:28:46.289 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE1 1 0 udp-c28f08bd-47e8-46b8-bb6a-fd7f43605a90 
+Jan 25 23:28:46.289 HYPERVISOR: exec_cmd: vm get_status CE1 
+Jan 25 23:28:46.375 HYPERVISOR: exec_cmd: nio create_udp udp-ad4d8cb3-d3cd-4abc-a605-a46311de16ab 10126 127.0.0.1 10127 
+Jan 25 23:28:46.378 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE1 2 0 udp-ad4d8cb3-d3cd-4abc-a605-a46311de16ab 
+Jan 25 23:28:46.378 HYPERVISOR: exec_cmd: vm get_status CE1 
+Jan 26 00:19:26.570 HYPERVISOR: exec_cmd: vm get_status CE1 
+Jan 26 00:19:26.572 HYPERVISOR: exec_cmd: vm extract_config CE1 
+Jan 26 00:19:28.441 HYPERVISOR: exec_cmd: vm get_status CE1 
+Jan 26 00:19:28.442 HYPERVISOR: exec_cmd: vm extract_config CE1 
+Jan 26 00:19:28.444 HYPERVISOR: exec_cmd: vm delete CE1 
+Jan 26 00:19:28.444 VM: VM CE1 destroyed.
+Jan 26 00:19:28.445 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 26 00:19:28.800 HYPERVISOR: Stopped.
+Jan 26 00:19:28.800 GENERAL: reset done.
