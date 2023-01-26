@@ -1,6 +1,7 @@
 import getpass
 import telnetlib
 import json
+import time
 
 if __name__ == "__main__":
     print('Configuration Telnet\n')
@@ -28,12 +29,11 @@ if __name__ == "__main__":
                     tn.write(b'configure terminal \r')
                     tn.write(b'interface ' + interface['name'].encode('ascii') + b' \r')
                     
-                    if(interface_name == 'Loopback0'):
+                    if(interface['name'] == 'Loopback0'):
                         router_id = (router['id']).encode('ascii')
-                        tn.write(b'ip address ' + router_id + b'.' + router_id + b'.' router_id + b'.' router_id + b' 255.255.255.255 \r')
+                        tn.write(b'ip address ' + router_id + b'.' + router_id + b'.' + router_id + b'.' + router_id + b' 255.255.255.255 \r')
                     else :
-                        router[id]
-                        tn.write(b'ip address' + interface['network-router'].encode('ascii') + b' 255.255.255.0 \r')
+                        tn.write(b'ip address' + interface['network_router'].encode('ascii') + b' 255.255.255.0 \r')
 
                     tn.write(b'no shutdown \r')
 
@@ -58,7 +58,7 @@ if __name__ == "__main__":
                 if(interface['state'] == 'up'):
                     for protocol in interface['protocols']:
                         if (protocol == 'OSPF'):
-                            tn.write(b'network ' + interface['network-router'].encode('ascii') + b' 0.0.0.0 area ' + router['ospf_area_id'] + b' \r')
+                            tn.write(b'network ' + interface['network_router'].encode('ascii') + b' 0.0.0.0 area ' + router['ospf_area_id'].encode('ascii') + b' \r')
                             tn.write(b' \r ')
                             time.sleep(0.1)
 
@@ -74,13 +74,14 @@ if __name__ == "__main__":
             # -------------------------------------------- eBGP ---------------------------------------------
 
             tn.write(b'configure terminal \r')
-            tn.write(b'router bgp' + router['as'].encode('ascii') + b'\r')
-            tn.write(b'bgp log-neighbor-changes\r')
+            
             for interface in router['interfaces']:
                 if(interface['state'] == 'up'):
                     for protocol in interface['protocols']:
                         if (protocol == 'EBGP'):
-                            tn.write(b'neighbor ' + interface['neighbor'].encode('ascii') + b' remote-as ' + interface['as'].encode('ascii')+' \r')
+                            tn.write(b'router bgp' + router['as'].encode('ascii') + b'\r')
+                            tn.write(b'bgp log-neighbor-changes\r')
+                            tn.write(b'neighbor ' + interface['neighbor'].encode('ascii') + b' remote-as ' + interface['as'].encode('ascii')+b' \r')
                             tn.write(b'address-family ipv4 \r')
                             tn.write(b'redistribute connected \r')
                             tn.write(b'neighbor ' + interface['neighbor'].encode('ascii') + b' activate \r')
@@ -94,7 +95,7 @@ if __name__ == "__main__":
             
             # -------------------------------------------- iBGP ---------------------------------------------
             tn.write(b'configure terminal \r')
-             for interface in router['interfaces']:
+            for interface in router['interfaces']:
                 if(interface['state'] == 'up'):
                     for protocol in interface['protocols']:
                         if (protocol == 'iBGP'):
@@ -106,7 +107,7 @@ if __name__ == "__main__":
                                 tn.write(b'exit \r')
                                 
                             tn.write(b'router bgp ' + router['as'].encode('ascii')+b' \r')
-                            tn.write(b'neighbor ' + interface['neighbor'].encode('ascii') + b' remote-as ' + interface['as'].encode('ascii')+' \r')
+                            tn.write(b'neighbor ' + interface['neighbor'].encode('ascii') + b' remote-as ' + interface['as'].encode('ascii')+b' \r')
                             tn.write(b'address-family vpnv4 \r')
                             tn.write(b'neighbor '+ interface['neighbor'].encode('ascii') + b' activate \r')
                             tn.write(b'neighbor ' + interface['neighbor'].encode('ascii') + b' send-community extended \r')
