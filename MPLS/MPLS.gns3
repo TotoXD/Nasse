@@ -138,7 +138,7 @@
                 "drawing_id": "7e3db846-0f0a-43ce-aa5e-5e33c534b20c",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg height=\"483.57332307471626\" width=\"735.8704468619337\"><ellipse cx=\"367\" cy=\"241\" fill=\"#4bff51\" fill-opacity=\"0.39215686274509803\" rx=\"368\" ry=\"242\" stroke=\"#000000\" stroke-dasharray=\"25, 25\" stroke-width=\"2\" /></svg>",
+                "svg": "<svg height=\"483.57332307471626\" width=\"735.8704468619337\"><ellipse cx=\"367\" cy=\"241\" fill=\"#4bff51\" fill-opacity=\"0.39215686274509803\" rx=\"368\" ry=\"242\" stroke=\"#000000\" stroke-width=\"2\" /></svg>",
                 "x": -453,
                 "y": -287,
                 "z": 0
@@ -877,8 +877,8 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg height=\"47\" width=\"106\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"24.0\">AS 500</text></svg>",
-                "x": -131,
-                "y": 255,
+                "x": -128,
+                "y": 250,
                 "z": 2
             },
             {
@@ -984,8 +984,8 @@
                 "drawing_id": "4ece47f1-b445-4cbd-9dc1-44b442bb660d",
                 "locked": true,
                 "rotation": 0,
-                "svg": "<svg height=\"404\" width=\"908\"><rect fill=\"#ff0000\" fill-opacity=\"0.3137254901960784\" height=\"404\" stroke=\"#000000\" stroke-width=\"2\" width=\"908\" /></svg>",
-                "x": -529,
+                "svg": "<svg height=\"404\" width=\"932\"><rect fill=\"#ff0000\" fill-opacity=\"0.3137254901960784\" height=\"404\" stroke=\"#000000\" stroke-width=\"2\" width=\"932\" /></svg>",
+                "x": -544,
                 "y": -971,
                 "z": -1
             },
@@ -1147,8 +1147,8 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg height=\"33\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"16.0\" font-weight=\"bold\">192.168.40.0/24</text></svg>",
-                "x": -359,
-                "y": -312,
+                "x": -360,
+                "y": -314,
                 "z": 2
             },
             {
@@ -1510,6 +1510,15 @@
                 "x": -268,
                 "y": -406,
                 "z": 2
+            },
+            {
+                "drawing_id": "b5d13a11-d6fa-4992-9fd7-dd040bd2ea60",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"98\" width=\"153\"><line stroke=\"#ffaa00\" stroke-width=\"5\" x1=\"0\" x2=\"153\" y1=\"0\" y2=\"98\" /></svg>",
+                "x": 57,
+                "y": -165,
+                "z": 1
             }
         ],
         "links": [
@@ -5806,5 +5815,5 @@
     "type": "topology",
     "variables": [],
     "version": "2.2.35.1",
-    "zoom": 67
+    "zoom": 56
 }

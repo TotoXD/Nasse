@@ -24,8 +24,8 @@ exit
 copy run start
 -------------------------------- (Exemple pour plusieurs interfaces à la fois)
 configure terminal
-interface gigabitEthernet 1/0
-ip address 192.168.40.2 255.255.255.0
+interface gigabitEthernet 3/0
+ip address 192.168.47.1 255.255.255.0
 no shutdown
 exit
 interface gigabitEthernet 2/0
@@ -61,7 +61,7 @@ Config ospf sur les routeurs
 ------------------------------
 configure terminal
 router ospf 1
-network 192.168.41.1 0.0.0.0 area 0
+network 192.168.45.1 0.0.0.0 area 0
 network 192.168.42.2 0.0.0.0 area 0
 exit
 exit
@@ -157,9 +157,9 @@ exit
 conf terminal
 interface gigabitEthernet 1/0
 ip route-cache cef
-mpls mtu 1500
-mpls ip
-mpls label protocol ldp
+no mpls mtu 1500
+no mpls ip
+no mpls label protocol ldp
 exit
 interface gigabitEthernet 2/0
 ip address 192.168.42.1 255.255.255.0
@@ -308,6 +308,7 @@ Dans la config, on va simuler : (bien configuré)
 	- L'implémentation de clients qui ont besoin de QoS
 	- Des peers en rab
 	- Des transporteurs en rab
+	- Que un des liens est surchargé
 
 	10. Pouvoir mettre des règles sur les nouveaux AS (customer/peer/provider?), en fonction de son rôle, la config BGP des poids sera différente
 
@@ -335,6 +336,121 @@ mais surtout appliquer de la PBR et du TE pour gagner en efficacité, en argent,
 12. Automatiser l'ajout de client dans le réseaux
 
 # II. Ecrire un script python qui permet de rajouter un CE dans le réseau facilement
+
+Pour un nouveau CE:
+------------------------------
+configure terminal
+interface gigabitEthernet 1/0
+ip address 192.168.46.2 255.255.255.0
+no shutdown
+exit
+exit
+configure terminal
+router bgp 600
+neighbor 192.168.47.1 remote-as 700
+address-family ipv4
+redistribute connected
+neighbor 192.168.47.1 activate
+exit-address-family
+exit
+exit
+copy run start
+------------------------------
+
+
+Pour un nouveau PE:
+------------------------------
+configure terminal
+interface gigabitEthernet 1/0
+ip address 192.168.46.2 255.255.255.0
+no shutdown
+exit
+interface gigabitEthernet 2/0
+ip address 192.168.46.2 255.255.255.0
+no shutdown
+exit
+interface gigabitEthernet 3/0
+ip address 192.168.46.2 255.255.255.0
+no shutdown
+exit
+exit
+configure terminal
+router ospf 1
+network 192.168.45.1 0.0.0.0 area 0
+network 192.168.42.2 0.0.0.0 area 0
+exit
+exit
+configure terminal
+router bgp 700
+neighbor 192.168.47.2 remote-as 600
+address-family ipv4
+redistribute connected
+neighbor 192.168.47.2 activate
+exit-address-family
+exit
+exit
+copy run start
+
+
+- Est ce que nos transporteurs et nos peers routent en MPLS ou en simple OSPF?
+
+
+- Qui partage les routes à qui?
+Faut pas donner les routes entre peer ou transporteurs
+Parce que s'il y a une meilleure route ils passent plus par nous
+Faire attention de pas rediriger le traffic PAR le client
+On veut jamais donner des routes qui passent pas par nous et qui sont plus forts que nous (la taille de l'ISP)
+Les clients on les advertise a tout le monde meme si c un gros isp
+On va pas advertise des routes qui vont d'isp à isp sinon ils nous volent
+Les gros peers vont nous donner une grosse charge de traffic
+Tout ce qui est plus petit que nous on les annonce
+On annonce pas depuis P1 que pp peut passer par nous pour aller chez PT
+
+- Où on met des access list	
+
+- Moyen facile de simuler du VOip? 
+=> Simuler téléphonie
+=> Réserver ressources sur un tunnel (ex: 10% pour du VOiP)
+
+- RSVP
+=> marche avec mpls
+=> file d'attente spécifique a chaque classe
+=> garantie que la voie peut passer plus vite
+=> de source à destination
+=> sans configurer
+=> mettre a jour rsvp pour pas réserver des ressources là ou il faut pas
+
+Diffserv
+=> Pour ne pas réserver les classes de facon permanente
+=> Pouvoir mettre des conditions sur les classes
+=> Et allocation selon les classes (priorité)
+=> Pas limiter a 2 classes comme rsvp
+
+Load balancing pour traffic engineering sur ibgp mpls
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus3600/sw/92x/label-switching/b-cisco-nexus-3600-series-nx-os-label-switching-configuration-guide-92x/b-cisco-nexus-3600-series-nx-os-label-switching-configuration-guide-92x_chapter_0101.pdf
+=> Pour décharger des liens
+=> Multipath
+=> Mettre des couts sur certains liens (plutot a l'intérieur du meme AS)
+
+Segment routing
+=> Pq pas regarder comment ca marche et le faire marcher et c un peu overkill
+=> Vérifier que c compatible
+=
+=> Forces les paquets a passer par certains segments du réseau
+=> Pour pas que des routes soient annoncés (plus courtes) et qu'on passe par la
+=> Routage fait par la source et pas à chaque hop + en precisant quel type de traffic
+
+Poids
+=> Mettre des poids (weight) sur les liens pour passer par plus une route que l'autre
+=> Local pref dans des route maps (préféré des routes) n'est pas absolu (peut etre configurer selon les traffics)
+peut etre configuré selon la source alors que weight est pour tout le monde
+=> Puis appliqué route map au neighbor bgp ou access list
+
+
+
+
+
+
 
 
 
