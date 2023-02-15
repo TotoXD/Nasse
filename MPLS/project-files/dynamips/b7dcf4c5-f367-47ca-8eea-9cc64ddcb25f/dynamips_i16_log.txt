@@ -1,0 +1,19 @@
+Feb 13 22:28:10.622 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Feb 13 22:28:10.624 HYPERVISOR: Started on IP = localhost, TCP port = 59536.
+Feb 13 22:28:11.124 HYPERVISOR: exec_cmd: hypervisor version 
+Feb 13 22:28:11.124 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\thoma\Desktop\TC4\S1\NAS\Nasnas\Nasse\MPLS\project-files\dynamips 
+Feb 13 22:28:11.124 GENERAL: working_dir=C:\Users\thoma\Desktop\TC4\S1\NAS\Nasnas\Nasse\MPLS\project-files\dynamips
+Feb 13 22:28:11.124 HYPERVISOR: exec_cmd: ethsw create CS12 
+Feb 13 22:28:23.744 HYPERVISOR: exec_cmd: nio create_udp udp-7503d96e-5328-4403-b84a-c8611ca175d3 10125 127.0.0.1 10124 
+Feb 13 22:28:23.744 HYPERVISOR: exec_cmd: ethsw add_nio CS12 udp-7503d96e-5328-4403-b84a-c8611ca175d3 
+Feb 13 22:28:23.767 HYPERVISOR: exec_cmd: ethsw set_access_port CS12 udp-7503d96e-5328-4403-b84a-c8611ca175d3 1 
+Feb 13 22:28:24.085 HYPERVISOR: exec_cmd: nio create_udp udp-359159c1-4349-4320-82a4-7766df67707b 10132 127.0.0.1 10133 
+Feb 13 22:28:24.085 HYPERVISOR: exec_cmd: ethsw add_nio CS12 udp-359159c1-4349-4320-82a4-7766df67707b 
+Feb 13 22:28:24.113 HYPERVISOR: exec_cmd: ethsw set_access_port CS12 udp-359159c1-4349-4320-82a4-7766df67707b 1 
+Feb 13 22:28:24.202 HYPERVISOR: exec_cmd: nio create_udp udp-eed73e61-59c4-4ec5-ae26-8534142c6d8c 10134 127.0.0.1 10135 
+Feb 13 22:28:24.203 HYPERVISOR: exec_cmd: ethsw add_nio CS12 udp-eed73e61-59c4-4ec5-ae26-8534142c6d8c 
+Feb 13 22:28:24.205 HYPERVISOR: exec_cmd: ethsw set_access_port CS12 udp-eed73e61-59c4-4ec5-ae26-8534142c6d8c 1 
+Feb 14 04:47:18.403 HYPERVISOR: exec_cmd: ethsw delete CS12 
+Feb 14 04:47:18.486 HYPERVISOR: exec_cmd: hypervisor stop 
+Feb 14 04:47:18.905 HYPERVISOR: Stopped.
+Feb 14 04:47:18.905 GENERAL: reset done.

@@ -1,9 +1,12 @@
 # Nasse
 
+https://docs.google.com/document/d/1YrTGvD-wjp-fUsvg6h7gWs9O9SO0MnUrrUnIVttYbR8/edit?usp=sharing
+
 Doc:
 https://www.cisco.com/c/en/us/support/docs/multiprotocol-label-switching-mpls/mpls/13733-mpls-vpn-basic.html
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/mp_l3_vpns/configuration/15-s/mp-l3-vpns-15-s-book/mp-bgp-mpls-vpn.html
 https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/117567-technote-ibgp-00.html
+https://web.eecs.umich.edu/~sugih/courses/eecs489/lectures/18-PolicyRouting.pdf
 
 # I. Configuration initiale du réseau:
 	
@@ -24,8 +27,8 @@ exit
 copy run start
 -------------------------------- (Exemple pour plusieurs interfaces à la fois)
 configure terminal
-interface gigabitEthernet 3/0
-ip address 192.168.47.1 255.255.255.0
+interface gigabitEthernet 5/0
+ip address 192.168.33.1 255.255.255.0
 no shutdown
 exit
 interface gigabitEthernet 2/0
@@ -123,15 +126,16 @@ neighbor 192.168.11.2 send-community extended
 exit
 router bgp 500
 address-family ipv4 vrf vpn1
-neighbor 2.2.2.2 remote-as 500
-neighbor 2.2.2.2 activate
-neighbor 2.2.2.2 send-community extended
+neighbor 192.168.11.2 remote-as 400
+neighbor 192.168.11.2 activate
+neighbor 192.168.11.2 send-community extended
 exit
 exit
 conf t
 interface gigabitEthernet 3/0
 ip vrf forwarding vpn1
 ip address 192.168.10.2 255.255.255.0
+exit
 copy run start
 ----------------------
 (Pour montrer voisin)
@@ -145,22 +149,12 @@ do sho ip bgp neighbors
 Config MPLS sur les routeurs (a faire sur toutes les interfaces du backbone)
 ------------------------------
 configure terminal
-interface gigabitEthernet 3/0
-ip address 192.168.46.1 255.255.255.0
-no shutdown
-exit
 interface gigabitEthernet 1/0
 ip address 192.168.41.1 255.255.255.0
 no shutdown
 ip cef
 exit
 conf terminal
-interface gigabitEthernet 1/0
-ip route-cache cef
-no mpls mtu 1500
-no mpls ip
-no mpls label protocol ldp
-exit
 interface gigabitEthernet 2/0
 ip address 192.168.42.1 255.255.255.0
 no shutdown
@@ -257,17 +251,18 @@ hash sha
 authentication pre-share
 group 5
 exit
-crypto isakmp key vpnuser address 192.168.10.2
-crypto ipsec transform-set myset esp-aes esp-sha-hmac
+crypto isakmp key vpnuser2 address 192.168.10.1
+crypto ipsec transform-set myset2 esp-aes esp-sha-hmac
 exit
-access-list 100 permit ip 192.168.30.0 0.0.0.255 192.168.10.0 0.0.0.255
-crypto map mymap 10 ipsec-isakmp
-set peer 192.168.10.2
-set transform-set myset
-match address 100
+access-list 101 permit ip 192.168.30.0 0.0.0.255 192.168.10.0 0.0.0.255
+crypto map mymap2 20 ipsec-isakmp
+set peer 192.168.10.1
+set transform-set myset2
+match address 101
 exit
 interface GigabitEthernet 1/0
-crypto map mymap
+negotiation auto
+crypto map mymap2
 exit
 exit
 copy run start
@@ -341,16 +336,15 @@ Pour un nouveau CE:
 ------------------------------
 configure terminal
 interface gigabitEthernet 1/0
-ip address 192.168.46.2 255.255.255.0
+ip address 192.168.33.2 255.255.255.0
 no shutdown
 exit
 exit
 configure terminal
-router bgp 600
-neighbor 192.168.47.1 remote-as 700
+router bgp 500
+neighbor 192.168.40.2 remote-as 800
 address-family ipv4
-redistribute connected
-neighbor 192.168.47.1 activate
+neighbor 192.168.40.2 activate
 exit-address-family
 exit
 exit
@@ -381,11 +375,13 @@ network 192.168.42.2 0.0.0.0 area 0
 exit
 exit
 configure terminal
-router bgp 700
-neighbor 192.168.47.2 remote-as 600
+router bgp 500
+neighbor 192.168.42.2 remote-as 700
+neighbor 192.168.41.2 remote-as 800
 address-family ipv4
 redistribute connected
-neighbor 192.168.47.2 activate
+neighbor 192.168.42.2 activate
+neighbor 192.168.41.2 activate
 exit-address-family
 exit
 exit
@@ -447,10 +443,80 @@ peut etre configuré selon la source alors que weight est pour tout le monde
 => Puis appliqué route map au neighbor bgp ou access list
 
 
+--------------------------------------
+• AS	exports	only	customer	routes	to	a	peer
+• AS	exports	a	peer’s	routes	only	to	its	customers
+• provider	tells	all	its	neighbors	how	to	reach	the	customer	
+• customer	does	not	let	its	providers	route	through	it
+
+An	AS’s	export	policy	(which	routes	it	will	advertise):	
+• to	a	customer:	all	routes	
+• to	a	peer	or	service	provider:	
+• routes	to	all	its	own	APs	and	to	its	customers’	APs,	
+• but	not to	APs	learned	from	other	providers	or	peers	
+• internal	routing	of	an	AS	is	effected	by	its	neighbors’	route	
+export	policy	
+
+
+Utilité?
+C'est bon pour moi d'aller vers CE6, pourtant, je veux pas passer en général par PT pour aller vers CE5 ou CE7, je passe donc par là que si je suis obligé 
 
 
 
+ neighbor 2.2.2.2 remote-as 500
+ neighbor 2.2.2.2 activate
+ neighbor 2.2.2.2 next-hop-self
+
+configure terminal
+interface gigabitEthernet 5/0
+ip vrf forwarding vpn11
+ip address 192.168.33.1 255.255.255.0
+no shutdown
+exit
+router bgp 500
+address-family ipv4 vrf vpn11
+neighbor 192.168.33.2 remote-as 400
+neighbor 192.168.33.2 activate
+neighbor 192.168.33.2 send-community extended
+exit
 
 
 
+route-map denypp permit 1
+match ip address prefix-list listpp
+exit
+ip prefix-list listpp seq 1 deny 192.168.41.0/24
+router bgp 500
+neighbor 192.168.42.2 remote-as 700
+neighbor 192.168.42.2 route-map denypp in
+no neighbor 192.168.42.2 distribute-list 1 out
 
+route-map denypt permit 3
+match ip address prefix-list listpt
+exit
+ip prefix-list listpt seq 3 deny 192.168.42.0/24
+router bgp 500
+neighbor 192.168.41.2 remote-as 700
+neighbor 192.168.41.2 route-map denypt in
+no neighbor 192.168.41.2 distribute-list 3 out
+
+
+* Adj-RIBs-In. The unedited routing information sent by neighboring routers.
+
+* Loc-RIB. The actual routing information the router uses, developed from Adj-RIBs-In.
+
+* Adj-RIBs-Out. The information the router chooses to send to neighboring routers.
+
+i redistribute everywhere, but when its a peer or a pt, i make sure i deny all the routes from peer or pts
+
+
+
+redistribute connected => redistribute one hop further
+redistribute (protocol) redistribute all routes from this protocol.
+
+neighbor 192.168.40.1 remote-as 500
+no neighbor 192.168.40.1 ebgp-multihop 3
+neighbor 192.168.41.1 remote-as 500
+no neighbor 192.168.41.1 ebgp-multihop 3
+neighbor 192.168.48.1 remote-as 600
+no neighbor 192.168.48.1 ebgp-multihop 3
