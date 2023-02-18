@@ -4,7 +4,11 @@ import json
 import time
 
 if __name__ == "__main__":
+
+
+    list=[]
     print('Configuration Telnet\n')
+
 
     # Le modèle de input data que j'ai fait est certainement à améliorer
     # Faudra faire un fichier .gns3 vide sans aucune config, juste avec les routers
@@ -33,7 +37,10 @@ if __name__ == "__main__":
                         router_id = (router['id']).encode('ascii')
                         tn.write(b'ip address ' + router_id + b'.' + router_id + b'.' + router_id + b'.' + router_id + b' 255.255.255.255 \r')
                     else :
-                        tn.write(b'ip address' + interface['network_router'].encode('ascii') + b' 255.255.255.0 \r')
+                        if interface['link'] in list:
+                            tn.write(b'ip address 192.168.' + interface['link'].encode('ascii') + b'.2 255.255.255.0 \r')
+                        else :
+                            tn.write(b'ip address 192.168.' + interface['link'].encode('ascii') + b'.1 255.255.255.0 \r')
 
                     tn.write(b'no shutdown \r')
 
@@ -58,7 +65,10 @@ if __name__ == "__main__":
                 if(interface['state'] == 'up'):
                     for protocol in interface['protocols']:
                         if (protocol == 'OSPF'):
-                            tn.write(b'network ' + interface['network_router'].encode('ascii') + b' 0.0.0.0 area ' + router['ospf_area_id'].encode('ascii') + b' \r')
+                            if interface['link'] in list:
+                                tn.write(b'network 192.168.' + interface['link'].encode('ascii') + b'.2 0.0.0.0 area ' + router['ospf_area_id'].encode('ascii') + b' \r')
+                            else :
+                                tn.write(b'network 192.168.' + interface['link'].encode('ascii') + b'.1 0.0.0.0 area ' + router['ospf_area_id'].encode('ascii') + b' \r')
                             tn.write(b' \r ')
                             time.sleep(0.1)
 
@@ -81,10 +91,16 @@ if __name__ == "__main__":
                         if (protocol == 'EBGP'):
                             tn.write(b'router bgp' + router['as'].encode('ascii') + b'\r')
                             tn.write(b'bgp log-neighbor-changes\r')
-                            tn.write(b'neighbor ' + interface['neighbor'].encode('ascii') + b' remote-as ' + interface['as'].encode('ascii')+b' \r')
+                            if interface['link'] in list:
+                                tn.write(b'neighbor 192.168.' + interface['link'].encode('ascii') + b'.1 remote-as ' + interface['as'].encode('ascii')+b' \r')
+                            else :
+                                tn.write(b'neighbor 192.168.' + interface['link'].encode('ascii') + b'.2 remote-as ' + interface['as'].encode('ascii')+b' \r')
                             tn.write(b'address-family ipv4 \r')
                             tn.write(b'redistribute connected \r')
-                            tn.write(b'neighbor ' + interface['neighbor'].encode('ascii') + b' activate \r')
+                            if interface['link'] in list:
+                                tn.write(b'neighbor 192.168.' + interface['link'].encode('ascii') + b'.1 activate \r')
+                            else :
+                                tn.write(b'neighbor 192.168.' + interface['link'].encode('ascii') + b'.2 activate \r')
                             tn.write(b'exit-address-family \r')
                             time.sleep(0.1)
 
@@ -117,8 +133,15 @@ if __name__ == "__main__":
                                 if (protocol == 'EBGP'):
                                     tn.write(b'router bgp ' + router['as'].encode('ascii')+b' \r')
                                     tn.write(b'address-family ipv4 vrf vpn' + interface_2['vrf'] + b' \r')
-                                    tn.write(b'neighbor '+ interface_2['neighbor'].encode('ascii') + b' activate \r')
-                                    tn.write(b'neighbor ' + interface_2['neighbor'].encode('ascii') + b' send-community extended \r')
+
+                                    #TROUVER UN MOYEN DE CHECK QUEL NUMERO POUR LA FIN DE L'IP
+                                    if router['name'] == "PE1":
+                                        tn.write(b'neighbor 192.168.' + interface_2['link'].encode('ascii') + b'.1 activate \r')
+                                        tn.write(b'neighbor 192.168.' + interface_2['link'].encode('ascii') + b'.1 send-community extended \r')
+                                    else :
+                                        tn.write(b'neighbor 192.168.' + interface_2['link'].encode('ascii') + b'.2 activate \r')
+                                        tn.write(b'neighbor 192.168.' + interface_2['link'].encode('ascii') + b'.2 send-community extended \r')
+
                                     tn.write(b'exit \r')
                                     
                                     tn.write(b'interface ' + interface_2['name'].encode('ascii') + b' \r')
@@ -129,9 +152,22 @@ if __name__ == "__main__":
             
 
             # -------------------------------------------- MPLS --------------------------------------------
-
-
-
+            for interface in router['interfaces']:
+                if(interface['state'] == 'up'):
+                    for protocol in interface['protocols']:
+                        if (protocol == 'MPLS'):
+                            tn.write(b'configure terminal \r')
+                            tn.write(b'interface ' + interface['name'].encode('ascii') + b' \r')
+                            tn.write(b'ip cef \r')
+                            tn.write(b'exit \r')
+                            tn.write(b'configure terminal \r')
+                            tn.write(b'interface ' + interface['name'].encode('ascii') + b' \r')
+                            tn.write(b'ip route-cache cef \r')
+                            tn.write(b'mpls mtu 1500\r')
+                            tn.write(b'mpls ip \r')
+                            tn.write(b'mpls label protocol ldp \r')
+                            tn.write(b'exit \r')
+                            tn.write(b'exit \r')
 
 
             # -------------------------------------------- Fin MPLS ----------------------------------------
