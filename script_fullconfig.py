@@ -158,6 +158,11 @@ if __name__ == "__main__":
                         if (protocol == 'MPLS'):
                             tn.write(b'configure terminal \r')
                             tn.write(b'interface ' + interface['name'].encode('ascii') + b' \r')
+                            if interface['link'] in list:
+                                tn.write(b'ip address 192.168.' + interface['link'].encode('ascii') + b'.2 255.255.255.0 \r')
+                            else :
+                                tn.write(b'ip address 192.168.' + interface['link'].encode('ascii') + b'.1 255.255.255.0 \r')
+
                             tn.write(b'ip cef \r')
                             tn.write(b'exit \r')
                             tn.write(b'configure terminal \r')
@@ -181,8 +186,9 @@ if __name__ == "__main__":
 
             # -------------------------------------------- Fin MPLS-VPN ------------------------------------
 
-
-
+        for interface in router['interfaces']:
+            list.append(interface['link'])
+        
 
 
 
