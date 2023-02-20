@@ -1,0 +1,162 @@
+{
+    "routers": [
+        {
+            "name": "CE5",
+            "id": "99",
+            "port": "5052",
+            "type" : "customer",
+            "as": "600",
+            "interfaces": [
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                }
+            ]
+        },
+        {
+            "name": "CE6",
+            "id": "105",
+            "port" : "5053",
+            "type" : "customer",
+            "as": "700",
+            "interfaces": [
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                }
+            ]
+        },
+        {
+            "name": "PE3",
+            "id": "17",
+            "port" : "5054",
+            "as": "500",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "name": "Loopback1",
+                    "protocols": ["OSPF", "IBGP"],
+                    "neighbor_loopback": "1.1.1.1"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "as": "500",
+                    "protocols": [
+                        "OSPF", "MPLS", "IBGP"
+                    ],
+                    "name": "GigabitEthernet1/0",
+                    "neighbor_loopback": "1.1.1.1"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet2/0"
+                }
+            ]
+        },
+        {
+            "name": "PE1",
+            "id": "1",
+            "port" : "5011",
+            "as": "500",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "name": "Loopback1",
+                    "protocols": [
+                        "OSPF", "IBGP"
+                    ],
+                    "neighbor_loopback": "17.17.17.17"
+                },
+                {
+                    "link": "5",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP", "IBGP"
+                    ],
+                    "name": "GigabitEthernet5/0",
+                    "neighbor_loopback": "17.17.17.17"
+                }
+            ]
+        },
+        {
+            "name": "P2",
+            "id": "6",
+            "port" : "5016",
+            "interfaces": [
+                {
+                    "link": "4",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF", "MPLS"
+                    ],
+                    "name": "GigabitEthernet4/0"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "id": "90",
+            "router1": "CE5",
+            "interface_router1" : "1",
+            "name_interface_router1" : "GigabitEthernet1/0",
+            "network_router1": "192.168.91.1",
+            "as": "600",
+            "router2": "PE1",
+            "interface_router2" : "5",
+            "name_interface_router2" : "GigabitEthernet5/0",
+            "network_router2": "192.168.91.2"
+        },
+        {
+            "id": "91",
+            "router1": "P2",
+            "interface_router1" : "4",
+            "name_interface_router1" : "GigabitEthernet4/0",
+            "network_router1": "192.168.92.1",
+            "router2": "PE3",
+            "interface_router2" : "1",
+            "name_interface_router2" : "GigabitEthernet1/0",
+            "network_router2": "192.168.92.2",
+            "as": "None"
+        },
+        {
+            "id": "92",
+            "router1": "PE3",
+            "interface_router1" : "2",
+            "name_interface_router1" : "GigabitEthernet2/0",
+            "network_router1": "192.168.93.1",
+            "router2": "CE6",
+            "interface_router2" : "1",
+            "name_interface_router2" : "GigabitEthernet1/0",
+            "network_router2": "192.168.93.2",
+            "as": "700"
+        }
+    ],
+    "vpns": [ 
+        {
+           "router1": "CE5",
+           "route_distinguisher1": "99",
+           "as1": "600",
+           "router2": "CE6",
+           "route_distinguisher2": "105",
+           "as2": "700",
+           "route_target": "3"
+        }
+
+    ]
+}

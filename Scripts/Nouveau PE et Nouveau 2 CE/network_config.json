@@ -1,0 +1,488 @@
+{
+    "routers": [
+        {
+            "name": "CE1",
+            "id": "3",
+            "port" : "5005",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet3/0"
+                }
+            ]
+        },
+        {
+            "name": "CE2",
+            "id": "4",
+            "port" : "5001",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "GigabitEthernet3/0"
+                }
+            ]
+        },
+        {
+            "name": "PE1",
+            "id": "1",
+            "port" : "5007",
+            "ospf_area_id": "0",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet3/0"
+                },
+                {
+                    "link": "4",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet4/0"
+                }
+            ]
+        },
+        {
+            "name": "P1",
+            "id": "5",
+            "port" : "5012",
+            "ospf_area_id": "0",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet3/0"
+                }
+            ]
+        },
+        {
+            "name": "P2",
+            "id": "6",
+            "port" : "5016",
+            "ospf_area_id": "0",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet3/0"
+                }
+            ]
+        },
+        {
+            "name": "P3",
+            "id": "7",
+            "port" : "5014",
+            "ospf_area_id": "0",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet3/0"
+                }
+            ]
+        },
+        {
+            "name": "P4",
+            "id": "8",
+            "port" : "5018",
+            "ospf_area_id": "0",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet3/0"
+                }
+            ]
+        },
+        {
+            "name": "PE2",
+            "id": "2",
+            "port" : "5022",
+            "ospf_area_id": "0",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF",
+                        "MPLS"
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet3/0"
+                },
+                {
+                    "link": "4",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet4/0"
+                }
+            ]
+        },
+        {
+            "name": "CE3",
+            "id": "9",
+            "port" : "5023",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "GigabitEthernet3/0"
+                }
+            ]
+        },
+        {
+            "name": "CE4",
+            "id": "10",
+            "port" : "5009",
+            "interfaces": [
+                {
+                    "link": "0",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "Loopback0"
+                },
+                {
+                    "link": "1",
+                    "state": "up",
+                    "protocols": [
+                        "EBGP"
+                    ],
+                    "name": "GigabitEthernet1/0"
+                },
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "GigabitEthernet2/0"
+                },
+                {
+                    "link": "3",
+                    "state": "up",
+                    "protocols": [
+                    ],
+                    "name": "GigabitEthernet3/0"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "id": "1",
+            "router1": "CE1",
+            "router2": "PE1",
+            "network": "192.168.10.0"
+        },
+        {
+            "id": "2",
+            "router1": "CE2",
+            "router2": "PE1",
+            "network": "192.168.11.0"
+        },
+        {
+            "id": "3",
+            "router1": "PE1",
+            "router2": "P1",
+            "network": "192.168.21.0"
+        },
+        {
+            "id": "4",
+            "router1": "PE1",
+            "router2": "P3",
+            "network": "192.168.20.0"
+        },
+        {
+            "id": "5",
+            "router1": "P1",
+            "router2": "P2",
+            "network": "192.168.22.0"
+        },
+        {
+            "id": "6",
+            "router1": "P1",
+            "router2": "P3",
+            "network": "192.168.24.0"
+        },
+        {
+            "id": "7",
+            "router1": "P3",
+            "router2": "P4",
+            "network": "192.168.23.0"
+        },
+        {
+            "id": "8",
+            "router1": "P2",
+            "router2": "P4",
+            "network": "192.168.25.0"
+        },
+        {
+            "id": "9",
+            "router1": "P2",
+            "router2": "PE2",
+            "network": "192.168.27.0"
+        },
+        {
+            "id": "10",
+            "router1": "P4",
+            "router2": "PE2",
+            "network": "192.168.26.0"
+        },
+        {
+            "id": "11",
+            "router1": "PE2",
+            "router2": "CE3",
+            "network": "192.168.30.0"
+        },
+        {
+            "id": "12",
+            "router1": "PE2",
+            "router2": "CE4",
+            "network": "192.168.31.0"
+        }
+    ]
+}

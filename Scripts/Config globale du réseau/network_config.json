@@ -2,13 +2,14 @@
 	"routers": [{
 			"name": "CE1",
 			"id": "1",
-			"port": "5005",
+			"port": "5000",
 			"as": "100",
 			"vrf": [
 				"1"
 			],
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [],
 					"name": "Loopback0"
@@ -44,13 +45,14 @@
 		{
 			"name": "CE2",
 			"id": "2",
-			"port": "5001",
+			"port": "5002",
 			"as": "200",
 			"vrf": [
 				"2"
 			],
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [],
 					"name": "Loopback0"
@@ -84,7 +86,7 @@
 		{
 			"name": "PE1",
 			"id": "3",
-			"port": "5007",
+			"port": "5004",
 			"ospf_area_id": "0",
 			"as": "500",
 			"vrf": [
@@ -93,6 +95,7 @@
 			],
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [
 						"iBGP"
@@ -138,13 +141,13 @@
 				{
 					"nb": "4",
 					"state": "up",
-					"protocols": [
-						"EBGP"
-					],
-					"name": "GigabitEthernet4/0",
-					"link": "11",
-					"neighbor": "192.168.11.2",
-					"as": "200",
+						"protocols": [
+							"EBGP"
+						],
+						"name": "GigabitEthernet4/0",
+						"link": "11",
+						"neighbor": "192.168.11.2",
+						"as": "200",
 					"vrf": "2"
 				}
 			]
@@ -152,10 +155,11 @@
 		{
 			"name": "P1",
 			"id": "4",
-			"port": "5012",
+			"port": "5005",
 			"ospf_area_id": "0",
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [],
 					"name": "Loopback0"
@@ -195,10 +199,11 @@
 		{
 			"name": "P2",
 			"id": "5",
-			"port": "5016",
+			"port": "5001",
 			"ospf_area_id": "0",
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [],
 					"name": "Loopback0"
@@ -238,10 +243,11 @@
 		{
 			"name": "P3",
 			"id": "6",
-			"port": "5014",
+			"port": "5003",
 			"ospf_area_id": "0",
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [],
 					"name": "Loopback0"
@@ -281,10 +287,11 @@
 		{
 			"name": "P4",
 			"id": "7",
-			"port": "5018",
+			"port": "5006",
 			"ospf_area_id": "0",
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [],
 					"name": "Loopback0"
@@ -324,7 +331,7 @@
 		{
 			"name": "PE2",
 			"id": "8",
-			"port": "5022",
+			"port": "5007",
 			"ospf_area_id": "0",
 			"as": "500",
 			"vrf": [
@@ -333,6 +340,7 @@
 			],
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [
 						"iBGP"
@@ -391,13 +399,14 @@
 		{
 			"name": "CE3",
 			"id": "9",
-			"port": "5023",
+			"port": "5008",
 			"as": "300",
 			"vrf": [
 				"1"
 			],
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [],
 					"name": "Loopback0"
@@ -439,6 +448,7 @@
 			],
 			"interfaces": [{
 					"nb": "0",
+					"link": "None",
 					"state": "up",
 					"protocols": [],
 					"name": "Loopback0"

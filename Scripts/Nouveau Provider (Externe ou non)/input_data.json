@@ -1,0 +1,48 @@
+{
+    "routers": [
+        {
+            "name": "P27-EXT",
+            "id": "56",
+            "port": "5051",
+            "type" : "provider",
+            "interfaces": [
+                {
+                    "link": "2",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF", "MPLS"
+                    ],
+                    "name": "GigabitEthernet2/0"
+                }
+            ]
+        },
+        {
+            "name": "P1",
+            "id": "4",
+            "port" : "5012",
+            "interfaces": [
+                {
+                    "link": "4",
+                    "state": "up",
+                    "protocols": [
+                        "OSPF", "MPLS"
+                    ],
+                    "name": "GigabitEthernet4/0"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "id": "89",
+            "router1": "P27-EXT",
+            "interface_router1" : "2",
+            "name_interface_router1" : "GigabitEthernet2/0",
+            "network_router1": "192.168.87.1",
+            "router2": "P1",
+            "interface_router2" : "4",
+            "name_interface_router2" : "GigabitEthernet4/0",
+            "network_router2": "192.168.87.2"
+        }
+    ]
+}
