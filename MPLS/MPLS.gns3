@@ -1512,15 +1512,6 @@
                 "z": 2
             },
             {
-                "drawing_id": "b5d13a11-d6fa-4992-9fd7-dd040bd2ea60",
-                "locked": false,
-                "rotation": 0,
-                "svg": "<svg height=\"98\" width=\"153\"><line stroke=\"#ffaa00\" stroke-width=\"5\" x1=\"0\" x2=\"153\" y1=\"0\" y2=\"98\" /></svg>",
-                "x": 57,
-                "y": -165,
-                "z": 1
-            },
-            {
                 "drawing_id": "dab2a642-08db-44ad-8394-48d15ef5cabc",
                 "locked": false,
                 "rotation": 0,
@@ -5961,5 +5952,5 @@
     "type": "topology",
     "variables": [],
     "version": "2.2.35.1",
-    "zoom": 67
+    "zoom": 79
 }
